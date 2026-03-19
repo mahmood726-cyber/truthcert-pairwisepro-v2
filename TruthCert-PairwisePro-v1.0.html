@@ -27173,7 +27173,7 @@ function _webrCheck(jsVal, rVal, absTol, label) {
   // For I2: absolute diff < 1.0 (percentage scale)
   var isI2 = label && label.indexOf('I') >= 0 && label.indexOf('2') >= 0 && label.indexOf('%') >= 0;
   if (isI2) return { passed: diff < 1.0, diff: diff, relErr: relErr };
-  return { passed: diff < (absTol || 1e-4) || relErr < 1e-3, diff: diff, relErr: relErr };
+  return { passed: diff <= (absTol || 1e-4) || relErr < 1e-3, diff: diff, relErr: relErr };
 }
 
 // Build comparison table HTML from rows array
@@ -27457,8 +27457,8 @@ async function runWebRValidation() {
         var jsLoo = [];
         if (AppState.results.influenceDiag && AppState.results.influenceDiag.studies) {
           jsLoo = AppState.results.influenceDiag.studies.map(function(s) { return s.theta_loo; });
-        } else if (AppState.results.loo && AppState.results.loo.results) {
-          jsLoo = AppState.results.loo.results.map(function(s) { return s.theta_loo || s.estimate; });
+        } else if (AppState.results.loo && AppState.results.loo.loo_results) {
+          jsLoo = AppState.results.loo.loo_results.map(function(s) { return s.effect != null ? s.effect : (s.theta_loo || s.estimate); });
         }
         if (looR.length > 0 && jsLoo.length === looR.length) {
           var looRows = [];

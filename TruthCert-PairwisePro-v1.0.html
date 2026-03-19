@@ -862,8 +862,8 @@ Test B 2021,72,8,18,202</pre>
                 <button class="btn btn--primary" id="webrRunBtn" onclick="runWebRValidation()" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); border: none; font-weight: 600; padding: 10px 24px;">
                   <span id="webrBtnLabel">Validate Current Analysis</span>
                 </button>
-                <div id="webrProgressIndicator" style="display: none; align-items: center; gap: 8px;">
-                  <span class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></span>
+                <div id="webrProgressIndicator" role="status" aria-live="polite" style="display: none; align-items: center; gap: 8px;">
+                  <span class="spinner" aria-hidden="true" style="width: 20px; height: 20px; border-width: 2px;"></span>
                   <span id="webrProgressText" style="font-size: 0.9rem; color: var(--color-text-secondary);">Initializing WebR...</span>
                 </div>
                 <span id="webrBadge" style="display: none; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;"></span>
@@ -873,8 +873,8 @@ Test B 2021,72,8,18,202</pre>
                 <button class="btn btn--outline" id="webrFullAuditBtn" onclick="runWebRFullAudit()" style="border-color: #7c3aed; color: #7c3aed; font-weight: 600; padding: 10px 24px;">
                   Run Full Audit (all 17 methods, ~30-60s)
                 </button>
-                <div id="webrFullAuditProgress" style="display: none; align-items: center; gap: 8px; margin-top: 12px;">
-                  <span class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></span>
+                <div id="webrFullAuditProgress" role="status" aria-live="polite" style="display: none; align-items: center; gap: 8px; margin-top: 12px;">
+                  <span class="spinner" aria-hidden="true" style="width: 20px; height: 20px; border-width: 2px;"></span>
                   <span id="webrFullAuditProgressText" style="font-size: 0.9rem; color: var(--color-text-secondary);">Running full audit...</span>
                 </div>
                 <div id="webrFullAuditResults"></div>
@@ -27126,7 +27126,7 @@ document.getElementById('quickStartModal').addEventListener('click', function(e)
     card.className = 'card';
     card.id = 'webrAuditCard';
     card.style.marginTop = 'var(--space-6)';
-    card.innerHTML = '<div class="card__header" style="background:linear-gradient(135deg,#7c3aed 0%,#a855f7 100%);border-radius:12px 12px 0 0;padding:20px;"><h2 class="card__title" style="color:white;margin:0;display:flex;align-items:center;gap:10px;"><span style="font-size:1.5rem;font-weight:700;font-family:monospace;background:rgba(255,255,255,0.2);padding:2px 10px;border-radius:6px;">R<\/span>WebR Full Audit Suite<\/h2><p style="color:rgba(255,255,255,0.85);margin:8px 0 0;font-size:0.9rem;">Gold-standard validation: runs R metafor in your browser via WebR. No server needed.<br>Tier 1: validates current method + pub bias + LOO. Tier 2: full 17-method parity matrix.<\/p><\/div><div class="card__body"><div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;"><button class="btn btn--primary" id="webrRunBtn" onclick="runWebRValidation()" style="background:linear-gradient(135deg,#7c3aed 0%,#a855f7 100%);border:none;font-weight:600;padding:10px 24px;"><span id="webrBtnLabel">Validate Current Analysis<\/span><\/button><div id="webrProgressIndicator" style="display:none;align-items:center;gap:8px;"><span class="spinner" style="width:20px;height:20px;border-width:2px;"><\/span><span id="webrProgressText" style="font-size:0.9rem;">Initializing WebR...<\/span><\/div><span id="webrBadge" style="display:none;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:700;letter-spacing:0.5px;"><\/span><\/div><div id="webrResultsContainer"><\/div><div id="webrFullAuditSection" style="display:none;margin-top:20px;border-top:2px solid var(--color-border);padding-top:20px;"><button class="btn btn--outline" id="webrFullAuditBtn" onclick="runWebRFullAudit()" style="border-color:#7c3aed;color:#7c3aed;font-weight:600;padding:10px 24px;">Run Full Audit (all 17 methods, ~30-60s)<\/button><div id="webrFullAuditProgress" style="display:none;align-items:center;gap:8px;margin-top:12px;"><span class="spinner" style="width:20px;height:20px;border-width:2px;"><\/span><span id="webrFullAuditProgressText" style="font-size:0.9rem;">Running full audit...<\/span><\/div><div id="webrFullAuditResults"><\/div><\/div><div style="margin-top:16px;padding:12px 16px;background:var(--color-bg-secondary);border-radius:8px;font-size:0.82rem;color:var(--color-text-secondary);line-height:1.5;"><strong>How it works:<\/strong> WebR compiles R to WebAssembly, allowing R code to run entirely in your browser. When metafor is available, results are <em>gold-standard CRAN package<\/em> validation. If metafor cannot be installed, a base-R DerSimonian-Laird fallback is used. First load ~20-40s (cached after).<\/div><\/div>';
+    card.innerHTML = '<div class="card__header" style="background:linear-gradient(135deg,#7c3aed 0%,#a855f7 100%);border-radius:12px 12px 0 0;padding:20px;"><h2 class="card__title" style="color:white;margin:0;display:flex;align-items:center;gap:10px;"><span style="font-size:1.5rem;font-weight:700;font-family:monospace;background:rgba(255,255,255,0.2);padding:2px 10px;border-radius:6px;">R<\/span>WebR Full Audit Suite<\/h2><p style="color:rgba(255,255,255,0.85);margin:8px 0 0;font-size:0.9rem;">Gold-standard validation: runs R metafor in your browser via WebR. No server needed.<br>Tier 1: validates current method + pub bias + LOO. Tier 2: full 18-method parity matrix (including FE).<\/p><\/div><div class="card__body"><div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;"><button class="btn btn--primary" type="button" id="webrRunBtn" onclick="runWebRValidation()" style="background:linear-gradient(135deg,#7c3aed 0%,#a855f7 100%);border:none;font-weight:600;padding:10px 24px;"><span id="webrBtnLabel">Validate Current Analysis<\/span><\/button><div id="webrProgressIndicator" role="status" aria-live="polite" style="display:none;align-items:center;gap:8px;"><span class="spinner" aria-hidden="true" style="width:20px;height:20px;border-width:2px;"><\/span><span id="webrProgressText" style="font-size:0.9rem;">Initializing WebR...<\/span><\/div><span id="webrBadge" role="status" aria-live="polite" style="display:none;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:700;letter-spacing:0.5px;"><\/span><\/div><div id="webrResultsContainer"><\/div><div id="webrFullAuditSection" style="display:none;margin-top:20px;border-top:2px solid var(--color-border);padding-top:20px;"><button class="btn btn--outline" type="button" id="webrFullAuditBtn" onclick="runWebRFullAudit()" style="border-color:#7c3aed;color:#7c3aed;font-weight:600;padding:10px 24px;">Run Full Audit (all 18 methods, ~30-60s)<\/button><div id="webrFullAuditProgress" role="status" aria-live="polite" style="display:none;align-items:center;gap:8px;margin-top:12px;"><span class="spinner" aria-hidden="true" style="width:20px;height:20px;border-width:2px;"><\/span><span id="webrFullAuditProgressText" style="font-size:0.9rem;">Running full audit...<\/span><\/div><div id="webrFullAuditResults"><\/div><\/div><div style="margin-top:16px;padding:12px 16px;background:var(--color-bg-secondary);border-radius:8px;font-size:0.82rem;color:var(--color-text-secondary);line-height:1.5;"><strong>How it works:<\/strong> WebR compiles R to WebAssembly, allowing R code to run entirely in your browser. When metafor is available, results are <em>gold-standard CRAN package<\/em> validation. If metafor cannot be installed, a base-R DerSimonian-Laird fallback is used. First load ~20-40s (cached after).<\/div><\/div>';
     panel.appendChild(card);
   }
   var observer = new MutationObserver(function() { setTimeout(injectWebrCard, 50); });
@@ -27187,13 +27187,18 @@ function _webrBuildTable(rows, rSource) {
   html += '<th style="padding:10px;text-align:right;">Diff</th>';
   html += '<th style="padding:10px;text-align:center;">Status</th>';
   html += '</tr></thead><tbody>';
+  var scoredCount = 0;
   for (var i = 0; i < rows.length; i++) {
     var row = rows[i];
     var chk = _webrCheck(row.js, row.r, row.tol, row.label);
-    if (chk.passed) passCount++;
-    var color = chk.passed ? '#10b981' : '#ef4444';
-    var status = chk.passed ? 'PASS' : 'DIFF';
-    if (row.skip) { color = '#9ca3af'; status = 'N/A'; }
+    var color, status;
+    if (row.skip) {
+      color = '#9ca3af'; status = '--- N/A';
+    } else {
+      scoredCount++;
+      if (chk.passed) { passCount++; color = '#10b981'; status = '\u2713 PASS'; }
+      else { color = '#ef4444'; status = '\u2717 DIFF'; }
+    }
     html += '<tr style="border-bottom:1px solid var(--color-border);">';
     html += '<td style="padding:8px 10px;font-weight:500;">' + _webrEsc(row.label) + '</td>';
     html += '<td style="padding:8px 10px;text-align:right;font-family:monospace;">' + (isFinite(row.js) ? row.js.toFixed(row.digits || 6) : 'N/A') + '</td>';
@@ -27203,7 +27208,7 @@ function _webrBuildTable(rows, rSource) {
     html += '</tr>';
   }
   html += '</tbody></table>';
-  return { html: html, passCount: passCount, totalCount: rows.length };
+  return { html: html, passCount: passCount, totalCount: scoredCount };
 }
 
 // Initialize WebR + install metafor (cached across calls)
@@ -27226,9 +27231,8 @@ async function _webrInit(progressText) {
   if (progressText) progressText.textContent = 'Initializing R interpreter...';
   _webrInstance = new WebR();
   await _webrInstance.init();
-  _webrLoading = false;
 
-  // Try to install metafor
+  // Try to install metafor (keep _webrLoading true until done to prevent race)
   if (progressText) progressText.textContent = 'Installing metafor package (first run may take 20s)...';
   try {
     await _webrInstance.evalR('webr::install("metafor", quiet = TRUE)');
@@ -27237,13 +27241,18 @@ async function _webrInit(progressText) {
   } catch (e) {
     _webrHasMetafor = false;
   }
+  _webrLoading = false;
   return _webrInstance;
 }
 
-// Helper: run R code and get numeric array
+// Helper: run R code and get numeric array (destroys R proxy to prevent WASM leak)
 async function _webrEvalNum(webR, code) {
   var result = await webR.evalR(code);
-  return await result.toArray();
+  try {
+    return await result.toArray();
+  } finally {
+    if (result && typeof result.destroy === 'function') result.destroy();
+  }
 }
 
 // =====================================================================
@@ -27311,13 +27320,22 @@ async function runWebRValidation() {
     var currentMethod = (AppState.settings && AppState.settings.tau2Method) ? AppState.settings.tau2Method : 'DL';
     var useHKSJ = !!(AppState.settings && AppState.settings.hksj);
 
-    // Map JS method names to metafor method names
-    var metaforMethods = { DL:'DL', REML:'REML', PM:'PM', PMM:'PMM', ML:'ML', HS:'HS', HSk:'HSk', SJ:'SJ', HE:'HE', EB:'EB', GENQ:'GENQ', GENQM:'GENQM' };
+    // Map JS method names to metafor method names (FE = fixed-effect / common-effect)
+    var metaforMethods = { DL:'DL', REML:'REML', PM:'PM', PMM:'PMM', ML:'ML', HS:'HS', HSk:'HSk', SJ:'SJ', HE:'HE', EB:'EB', GENQ:'GENQ', GENQM:'GENQM', FE:'FE' };
     var rMethod = metaforMethods[currentMethod] || null;
 
     var allHtml = '';
     var totalPass = 0;
     var totalMetrics = 0;
+
+    if (_webrHasMetafor && !rMethod) {
+      // Non-metafor method selected — show note, fall through to base-R
+      allHtml += '<div style="margin-top:12px;padding:10px 14px;background:var(--color-bg-secondary);border-left:3px solid #f59e0b;border-radius:4px;font-size:0.85rem;color:var(--color-text-secondary);">';
+      allHtml += '<strong>Note:</strong> Your current method <strong>' + _webrEsc(currentMethod) + '</strong> has no metafor oracle. ';
+      allHtml += 'Tier 1 shows REML comparison instead. Use the Full Audit for the complete 17-method parity matrix.';
+      allHtml += '</div>';
+      rMethod = 'REML';
+    }
 
     if (_webrHasMetafor && rMethod) {
       // ---- Core pooling: current method ----
@@ -27345,7 +27363,7 @@ async function runWebRValidation() {
       if (useHKSJ && AppState.results.hksj) {
         jsCILo = AppState.results.hksj.ci_lower;
         jsCIHi = AppState.results.hksj.ci_upper;
-        jsSE = AppState.results.hksj.se_hksj || jsSE;
+        jsSE = AppState.results.hksj.se_hksj ?? jsSE;
       }
 
       var coreRows = [
@@ -27378,8 +27396,8 @@ async function runWebRValidation() {
         var eggerR = await _webrEvalNum(webR, eggerCode);
         var jsEgger = AppState.results.egger || {};
         var eggerRows = [
-          { label: 'Egger t-statistic', js: jsEgger.t_statistic || NaN, r: eggerR[0], digits: 4 },
-          { label: 'Egger p-value', js: jsEgger.p_value || NaN, r: eggerR[1], digits: 6 }
+          { label: 'Egger t-statistic', js: jsEgger.t_statistic ?? NaN, r: eggerR[0], digits: 4 },
+          { label: 'Egger p-value', js: jsEgger.p_value ?? NaN, r: eggerR[1], digits: 6 }
         ];
         var eggerTable = _webrBuildTable(eggerRows, 'metafor regtest');
         allHtml += '<h3 style="margin:20px 0 4px;font-size:1rem;color:var(--color-text-primary);">Publication Bias: Egger&#39;s Test</h3>';
@@ -27393,8 +27411,9 @@ async function runWebRValidation() {
       // ---- Trim and fill ----
       progressText.textContent = 'Running trim-and-fill...';
       try {
+        // JS trimAndFill hardcodes REML internally, so use REML in R regardless of current method
         var tfCode = 'yi <- c(' + yiStr + ')\nvi <- c(' + viStr + ')\n' +
-          'fit <- rma(yi, vi, method="' + rMethod + '")\n' +
+          'fit <- rma(yi, vi, method="REML")\n' +
           'tf <- trimfill(fit)\n' +
           'c(tf$k0, tf$beta[1], tf$ci.lb, tf$ci.ub)';
         var tfR = await _webrEvalNum(webR, tfCode);
@@ -27466,7 +27485,7 @@ async function runWebRValidation() {
           for (var li = 0; li < looR.length; li++) {
             looRows.push({
               label: 'LOO excl. ' + _webrEsc((names[li] || ('Study ' + (li + 1))).substring(0, 30)),
-              js: jsLoo[li] || NaN,
+              js: jsLoo[li] ?? NaN,
               r: looR[li],
               digits: 6
             });
@@ -27501,7 +27520,8 @@ async function runWebRValidation() {
         'wi_re <- 1 / (vi + tau2)\ntheta_re <- sum(wi_re * yi) / sum(wi_re)\n' +
         'se_re <- sqrt(1/sum(wi_re))\n' +
         'I2 <- ifelse(Q > (k-1), max(0, (Q - (k-1))/Q * 100), 0)\n' +
-        'c(theta_re, se_re, tau2, I2, Q, 1-pchisq(Q,k-1), theta_re - 1.96*se_re, theta_re + 1.96*se_re, k)';
+        'z <- qnorm(0.975)\n' +
+        'c(theta_re, se_re, tau2, I2, Q, 1-pchisq(Q,k-1), theta_re - z*se_re, theta_re + z*se_re, k)';
       var fbR = await _webrEvalNum(webR, fallbackCode);
 
       var jsPooled = AppState.results.pooled ? AppState.results.pooled.theta : NaN;
@@ -27606,10 +27626,10 @@ async function runWebRFullAudit() {
   var viStr = vi.map(function(v) { return v.toFixed(12); }).join(', ');
   var webR = _webrInstance;
 
-  // All 17 methods in the JS engine
-  var allMethods = ['DL', 'REML', 'PM', 'PMM', 'ML', 'HS', 'HSk', 'SJ', 'HE', 'EB', 'GENQ', 'GENQM', 'PL', 'DL2', 'CA', 'BMM', 'QG'];
+  // All 17 RE methods + FE in the JS engine
+  var allMethods = ['FE', 'DL', 'REML', 'PM', 'PMM', 'ML', 'HS', 'HSk', 'SJ', 'HE', 'EB', 'GENQ', 'GENQM', 'PL', 'DL2', 'CA', 'BMM', 'QG'];
   // Methods metafor supports natively
-  var metaforNative = { DL:1, REML:1, PM:1, PMM:1, ML:1, HS:1, HSk:1, SJ:1, HE:1, EB:1, GENQ:1, GENQM:1 };
+  var metaforNative = { FE:1, DL:1, REML:1, PM:1, PMM:1, ML:1, HS:1, HSk:1, SJ:1, HE:1, EB:1, GENQ:1, GENQM:1 };
   // PL can be done via confint on ML fit
 
   var allHtml = '';
@@ -27639,13 +27659,22 @@ async function runWebRFullAudit() {
 
       // Compute JS pooled for this method
       try {
-        var tau2Obj = estimateTau2(yi, vi, method);
-        jsTau2Val = tau2Obj.tau2;
-        var pooled = calculatePooledEstimate(yi, vi, tau2Obj, method);
-        jsTheta = pooled.theta;
-        jsSE = pooled.se;
-        jsCILo = pooled.ci_lower;
-        jsCIHi = pooled.ci_upper;
+        if (method === 'FE') {
+          jsTau2Val = 0;
+          var pooled = calculatePooledEstimate(yi, vi, 0);
+          jsTheta = pooled.theta;
+          jsSE = pooled.se;
+          jsCILo = pooled.ci_lower;
+          jsCIHi = pooled.ci_upper;
+        } else {
+          var tau2Obj = estimateTau2(yi, vi, method);
+          jsTau2Val = tau2Obj.tau2;
+          var pooled = calculatePooledEstimate(yi, vi, tau2Obj, method);
+          jsTheta = pooled.theta;
+          jsSE = pooled.se;
+          jsCILo = pooled.ci_lower;
+          jsCIHi = pooled.ci_upper;
+        }
       } catch(e) {}
 
       if (metaforNative[method]) {
@@ -27657,49 +27686,57 @@ async function runWebRFullAudit() {
           var mR = await _webrEvalNum(webR, mCode);
           var tauChk = _webrCheck(jsTau2Val, mR[2], 1e-4, 'tau2');
           var thetaChk = _webrCheck(jsTheta, mR[0], 1e-4, 'theta');
+          var seChk = _webrCheck(jsSE, mR[1], 1e-4, 'SE');
+          var ciLoChk = _webrCheck(jsCILo, mR[3], 1e-4, 'CI');
+          var ciHiChk = _webrCheck(jsCIHi, mR[4], 1e-4, 'CI');
           if (tauChk.passed) totalPass++;
           if (thetaChk.passed) totalPass++;
-          totalMetrics += 2;
+          if (seChk.passed) totalPass++;
+          if (ciLoChk.passed) totalPass++;
+          if (ciHiChk.passed) totalPass++;
+          totalMetrics += 5;
           methodResults.push({
             method: method, oracle: 'metafor',
             jsTheta: jsTheta, rTheta: mR[0], thetaPass: thetaChk.passed, thetaDiff: thetaChk.diff,
             jsTau2: jsTau2Val, rTau2: mR[2], tau2Pass: tauChk.passed, tau2Diff: tauChk.diff,
-            jsSE: jsSE, rSE: mR[1],
-            jsCILo: jsCILo, rCILo: mR[3], jsCIHi: jsCIHi, rCIHi: mR[4],
+            jsSE: jsSE, rSE: mR[1], sePass: seChk.passed,
+            jsCILo: jsCILo, rCILo: mR[3], ciLoPass: ciLoChk.passed,
+            jsCIHi: jsCIHi, rCIHi: mR[4], ciHiPass: ciHiChk.passed,
             error: null
           });
         } catch (mErr) {
-          totalMetrics += 2;
+          totalMetrics += 5;
           methodResults.push({
             method: method, oracle: 'metafor',
             jsTheta: jsTheta, rTheta: NaN, thetaPass: false, thetaDiff: NaN,
             jsTau2: jsTau2Val, rTau2: NaN, tau2Pass: false, tau2Diff: NaN,
+            sePass: false, ciLoPass: false, ciHiPass: false,
             error: mErr.message
           });
         }
       } else if (method === 'PL') {
-        // Profile Likelihood via confint on ML fit
+        // JS PL maximizes REML log-likelihood, so compare against REML fit
         try {
           var plCode = 'yi <- c(' + yiStr + ')\nvi <- c(' + viStr + ')\n' +
-            'fit <- rma(yi, vi, method="ML")\n' +
-            'ci <- confint(fit)\n' +
-            'c(fit$beta[1], fit$se, fit$tau2, ci$random["tau^2","estimate"])';
+            'fit <- rma(yi, vi, method="REML")\n' +
+            'c(fit$beta[1], fit$se, fit$tau2)';
           var plR = await _webrEvalNum(webR, plCode);
-          var plTauChk = _webrCheck(jsTau2Val, plR[3], 1e-3, 'tau2');
+          var plTauChk = _webrCheck(jsTau2Val, plR[2], 1e-3, 'tau2');
           var plThetaChk = _webrCheck(jsTheta, plR[0], 1e-4, 'theta');
           if (plTauChk.passed) totalPass++;
           if (plThetaChk.passed) totalPass++;
           totalMetrics += 2;
           methodResults.push({
-            method: method, oracle: 'metafor confint',
+            method: method, oracle: 'metafor REML',
             jsTheta: jsTheta, rTheta: plR[0], thetaPass: plThetaChk.passed, thetaDiff: plThetaChk.diff,
-            jsTau2: jsTau2Val, rTau2: plR[3], tau2Pass: plTauChk.passed, tau2Diff: plTauChk.diff,
+            jsTau2: jsTau2Val, rTau2: plR[2], tau2Pass: plTauChk.passed, tau2Diff: plTauChk.diff,
+            jsSE: jsSE, rSE: plR[1],
             error: null
           });
         } catch (plErr) {
           totalMetrics += 2;
           methodResults.push({
-            method: method, oracle: 'metafor confint',
+            method: method, oracle: 'metafor REML',
             jsTheta: jsTheta, rTheta: NaN, thetaPass: false, thetaDiff: NaN,
             jsTau2: jsTau2Val, rTau2: NaN, tau2Pass: false, tau2Diff: NaN,
             error: plErr.message
@@ -27716,21 +27753,23 @@ async function runWebRFullAudit() {
       }
     }
 
-    // ---- HKSJ comparison ----
-    progressText.textContent = 'Comparing HKSJ adjustment...';
+    // ---- HKSJ comparison (uses current method to match JS) ----
+    var hksjMethod = (AppState.settings && AppState.settings.tau2Method) ? AppState.settings.tau2Method : 'REML';
+    var hksjRMethod = metaforNative[hksjMethod] ? hksjMethod : 'REML';
+    progressText.textContent = 'Comparing HKSJ adjustment (' + hksjRMethod + ')...';
     try {
       var hksjCode = 'yi <- c(' + yiStr + ')\nvi <- c(' + viStr + ')\n' +
-        'fit_z <- rma(yi, vi, method="REML")\n' +
-        'fit_t <- rma(yi, vi, method="REML", test="knha")\n' +
+        'fit_z <- rma(yi, vi, method="' + hksjRMethod + '")\n' +
+        'fit_t <- rma(yi, vi, method="' + hksjRMethod + '", test="knha")\n' +
         'c(fit_z$ci.lb, fit_z$ci.ub, fit_t$ci.lb, fit_t$ci.ub, fit_t$se)';
       var hksjR = await _webrEvalNum(webR, hksjCode);
       // JS HKSJ values
       var jsHksj = AppState.results.hksj || {};
       var hksjNote = {
-        method: 'HKSJ (REML+knha)', oracle: 'metafor',
-        jsCILo: jsHksj.ci_lower || NaN, rCILo: hksjR[2],
-        jsCIHi: jsHksj.ci_upper || NaN, rCIHi: hksjR[3],
-        jsSE: jsHksj.se_hksj || NaN, rSE: hksjR[4]
+        method: 'HKSJ (' + hksjRMethod + '+knha)', oracle: 'metafor',
+        jsCILo: jsHksj.ci_lower ?? NaN, rCILo: hksjR[2],
+        jsCIHi: jsHksj.ci_upper ?? NaN, rCIHi: hksjR[3],
+        jsSE: jsHksj.se_hksj ?? NaN, rSE: hksjR[4]
       };
     } catch(e) { hksjNote = null; }
 
@@ -27747,22 +27786,28 @@ async function runWebRFullAudit() {
     allHtml += '<th style="padding:8px;text-align:right;">JS tau2</th>';
     allHtml += '<th style="padding:8px;text-align:right;">R tau2</th>';
     allHtml += '<th style="padding:8px;text-align:center;">tau2</th>';
+    allHtml += '<th style="padding:8px;text-align:center;">SE/CI</th>';
     allHtml += '</tr></thead><tbody>';
 
     for (var ri = 0; ri < methodResults.length; ri++) {
       var mr = methodResults[ri];
-      var thetaColor, thetaStatus, tau2Color, tau2Status;
+      var thetaColor, thetaStatus, tau2Color, tau2Status, seciColor, seciStatus;
       if (mr.noOracle) {
         thetaColor = '#9ca3af'; thetaStatus = 'JS-only';
         tau2Color = '#9ca3af'; tau2Status = 'JS-only';
+        seciColor = '#9ca3af'; seciStatus = '---';
       } else if (mr.error) {
         thetaColor = '#f59e0b'; thetaStatus = 'ERROR';
         tau2Color = '#f59e0b'; tau2Status = 'ERROR';
+        seciColor = '#f59e0b'; seciStatus = 'ERROR';
       } else {
         thetaColor = mr.thetaPass ? '#10b981' : '#ef4444';
-        thetaStatus = mr.thetaPass ? 'PASS' : 'DIFF';
+        thetaStatus = mr.thetaPass ? '\u2713' : '\u2717';
         tau2Color = mr.tau2Pass ? '#10b981' : '#ef4444';
-        tau2Status = mr.tau2Pass ? 'PASS' : 'DIFF';
+        tau2Status = mr.tau2Pass ? '\u2713' : '\u2717';
+        var seciAll = (mr.sePass !== false) && (mr.ciLoPass !== false) && (mr.ciHiPass !== false);
+        seciColor = seciAll ? '#10b981' : '#ef4444';
+        seciStatus = seciAll ? '\u2713 3/3' : '\u2717 ' + ((mr.sePass?1:0)+(mr.ciLoPass?1:0)+(mr.ciHiPass?1:0)) + '/3';
       }
 
       allHtml += '<tr style="border-bottom:1px solid var(--color-border);">';
@@ -27774,6 +27819,7 @@ async function runWebRFullAudit() {
       allHtml += '<td style="padding:6px 8px;text-align:right;font-family:monospace;">' + (isFinite(mr.jsTau2) ? mr.jsTau2.toFixed(6) : 'N/A') + '</td>';
       allHtml += '<td style="padding:6px 8px;text-align:right;font-family:monospace;">' + (isFinite(mr.rTau2) ? mr.rTau2.toFixed(6) : (mr.noOracle ? '---' : 'N/A')) + '</td>';
       allHtml += '<td style="padding:6px 8px;text-align:center;color:' + tau2Color + ';font-weight:600;font-size:0.8rem;">' + tau2Status + '</td>';
+      allHtml += '<td style="padding:6px 8px;text-align:center;color:' + seciColor + ';font-weight:600;font-size:0.8rem;">' + seciStatus + '</td>';
       allHtml += '</tr>';
     }
 
@@ -27788,15 +27834,15 @@ async function runWebRFullAudit() {
       totalMetrics += 3;
 
       allHtml += '<tr style="border-bottom:1px solid var(--color-border);background:var(--color-bg-secondary);">';
-      allHtml += '<td style="padding:6px 8px;font-weight:600;" colspan="2">HKSJ (REML + test=&quot;knha&quot;)</td>';
+      allHtml += '<td style="padding:6px 8px;font-weight:600;" colspan="2">HKSJ (' + _webrEsc(hksjRMethod) + ' + test=&quot;knha&quot;)</td>';
       allHtml += '<td colspan="3" style="padding:6px 8px;font-size:0.82rem;text-align:center;">';
       allHtml += 'SE: JS=' + (isFinite(hksjNote.jsSE) ? hksjNote.jsSE.toFixed(6) : 'N/A') + ' R=' + (isFinite(hksjNote.rSE) ? hksjNote.rSE.toFixed(6) : 'N/A');
-      allHtml += ' <span style="color:' + (hksjSeChk.passed ? '#10b981' : '#ef4444') + ';font-weight:600;">' + (hksjSeChk.passed ? 'PASS' : 'DIFF') + '</span>';
+      allHtml += ' <span style="color:' + (hksjSeChk.passed ? '#10b981' : '#ef4444') + ';font-weight:600;">' + (hksjSeChk.passed ? '\u2713 PASS' : '\u2717 DIFF') + '</span>';
       allHtml += '</td>';
       allHtml += '<td colspan="3" style="padding:6px 8px;font-size:0.82rem;text-align:center;">';
       allHtml += 'CI: [' + (isFinite(hksjNote.jsCILo) ? hksjNote.jsCILo.toFixed(4) : '?') + ', ' + (isFinite(hksjNote.jsCIHi) ? hksjNote.jsCIHi.toFixed(4) : '?') + '] vs R [';
       allHtml += (isFinite(hksjNote.rCILo) ? hksjNote.rCILo.toFixed(4) : '?') + ', ' + (isFinite(hksjNote.rCIHi) ? hksjNote.rCIHi.toFixed(4) : '?') + '] ';
-      allHtml += '<span style="color:' + (hksjLoChk.passed && hksjHiChk.passed ? '#10b981' : '#ef4444') + ';font-weight:600;">' + (hksjLoChk.passed && hksjHiChk.passed ? 'PASS' : 'DIFF') + '</span>';
+      allHtml += '<span style="color:' + (hksjLoChk.passed && hksjHiChk.passed ? '#10b981' : '#ef4444') + ';font-weight:600;">' + (hksjLoChk.passed && hksjHiChk.passed ? '\u2713 PASS' : '\u2717 DIFF') + '</span>';
       allHtml += '</td>';
       allHtml += '</tr>';
     }
@@ -27820,7 +27866,10 @@ async function runWebRFullAudit() {
     allHtml += '<div style="background:' + verdictBg + ';color:white;padding:20px;border-radius:8px;margin-top:16px;text-align:center;">';
     allHtml += '<div style="font-size:1.5rem;font-weight:700;">Full Audit: ' + totalPass + '/' + oracleMetrics + ' metrics PASS</div>';
     allHtml += '<div style="font-size:0.9rem;opacity:0.9;margin-top:6px;">';
-    allHtml += '13 methods validated against metafor CRAN package + 1 via confint() | 4 JS-only (no oracle)';
+    var nValidated = methodResults.filter(function(m) { return !m.noOracle && !m.error; }).length;
+    var nErrors = methodResults.filter(function(m) { return !m.noOracle && m.error; }).length;
+    var nJsOnly = methodResults.filter(function(m) { return m.noOracle; }).length;
+    allHtml += nValidated + ' methods validated against metafor' + (nErrors > 0 ? ' | ' + nErrors + ' errors' : '') + ' | ' + nJsOnly + ' JS-only (no oracle)';
     allHtml += '<br>WebR v0.4.4 | metafor ' + (_webrHasMetafor ? 'installed' : 'unavailable');
     allHtml += ' | k=' + yi.length + ' studies | ' + new Date().toLocaleString();
     allHtml += '</div></div>';

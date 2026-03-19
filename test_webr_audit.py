@@ -360,15 +360,20 @@ try:
         """)
         check("_webrBuildTable returns HTML", table_result['html'] > 100)
         check("_webrBuildTable passCount=2 (2 match, 1 diff)", table_result['pass'] == 2)
-        check("_webrBuildTable totalCount=3", table_result['total'] == 3)
+        check("_webrBuildTable totalCount=3 (scored only)", table_result['total'] == 3)
 
-        # Skip flag
+        # Skip flag — skip rows excluded from totalCount
         skip_result = driver.execute_script("""
-            var rows = [{label:'Skipped', js: NaN, r: 1.0, digits: 4, skip: true}];
+            var rows = [
+                {label:'Good', js: 1.0, r: 1.0, digits: 4},
+                {label:'Skipped', js: NaN, r: 1.0, digits: 4, skip: true}
+            ];
             var t = _webrBuildTable(rows, 'test');
-            return {html: t.html, pass: t.passCount};
+            return {html: t.html, pass: t.passCount, total: t.totalCount};
         """)
         check("_webrBuildTable skip row shows N/A", 'N/A' in skip_result['html'])
+        check("_webrBuildTable skip rows excluded from totalCount", skip_result['total'] == 1)
+        check("_webrBuildTable passCount only counts scored rows", skip_result['pass'] == 1)
 
         # =========================================================
         # TEST 9: _webrEsc security
@@ -388,9 +393,87 @@ try:
         check("_webrEsc handles non-string", esc4 == '')
 
         # =========================================================
-        # TEST 10: estimateTau2_All produces all 17 methods
+        # TEST 10: Review fixes verification
         # =========================================================
-        print("\n[10] Testing estimateTau2_All (17 methods)...")
+        print("\n[10] Verifying review fixes...")
+
+        # P0-4: _webrEvalNum has destroy (check function source)
+        has_destroy = driver.execute_script("return _webrEvalNum.toString().indexOf('destroy') >= 0;")
+        check("P0-4: _webrEvalNum has .destroy() call", has_destroy)
+
+        # P1-4: _webrInit sets _webrLoading=false AFTER metafor (check source)
+        init_src = driver.execute_script("return _webrInit.toString();")
+        loading_false_pos = init_src.rfind('_webrLoading = false')
+        metafor_pos = init_src.find('_webrHasMetafor')
+        check("P1-4: _webrLoading=false after metafor install", loading_false_pos > metafor_pos)
+
+        # P0-5: FE in metaforMethods (Tier 1)
+        has_fe = driver.execute_script("""
+            var src = runWebRValidation.toString();
+            return src.indexOf("FE:'FE'") >= 0 || src.indexOf('FE:"FE"') >= 0;
+        """)
+        check("P0-5: FE in metaforMethods map", has_fe)
+
+        # P0-5: FE in allMethods (Tier 2)
+        has_fe_t2 = driver.execute_script("""
+            var src = runWebRFullAudit.toString();
+            return src.indexOf("'FE'") >= 0;
+        """)
+        check("P0-5: FE in Tier 2 allMethods", has_fe_t2)
+
+        # P1-9: Checkmark/cross in _webrBuildTable output
+        icons_result = driver.execute_script("""
+            var rows = [{label:'Test', js: 1.0, r: 1.0, digits: 4}];
+            var t = _webrBuildTable(rows, 'test');
+            return t.html.indexOf('\\u2713') >= 0;
+        """)
+        check("P1-9: Checkmark icon in PASS status", icons_result)
+
+        # P1-8: ARIA on progress indicators
+        aria_progress = driver.execute_script("""
+            var el = document.getElementById('webrProgressIndicator');
+            return el ? el.getAttribute('aria-live') : null;
+        """)
+        check("P1-8: webrProgressIndicator has aria-live", aria_progress == 'polite')
+
+        aria_full = driver.execute_script("""
+            var el = document.getElementById('webrFullAuditProgress');
+            return el ? el.getAttribute('aria-live') : null;
+        """)
+        check("P1-8: webrFullAuditProgress has aria-live", aria_full == 'polite')
+
+        # P1-7: Skip rows excluded from totalCount
+        skip_count = driver.execute_script("""
+            var rows = [
+                {label:'A', js:1, r:1, digits:4},
+                {label:'B', js:NaN, r:1, digits:4, skip:true},
+                {label:'C', js:2, r:3, digits:4}
+            ];
+            var t = _webrBuildTable(rows, 'test');
+            return t.totalCount;
+        """)
+        check("P1-7: Skip rows not counted (2 scored of 3 total)", skip_count == 2)
+
+        # P0-1: ?? NaN (check source for || NaN absence)
+        webr_src = driver.execute_script("return runWebRValidation.toString();")
+        has_bad_or = '|| NaN' in webr_src
+        check("P0-1: No || NaN in runWebRValidation", not has_bad_or)
+
+        audit_src = driver.execute_script("return runWebRFullAudit.toString();")
+        has_bad_or2 = '|| NaN' in audit_src
+        check("P0-1: No || NaN in runWebRFullAudit", not has_bad_or2)
+
+        # P1-3: Base-R fallback uses qnorm not 1.96
+        has_qnorm = driver.execute_script("""
+            var src = runWebRValidation.toString();
+            return src.indexOf('qnorm(0.975)') >= 0;
+        """)
+        check("P1-3: Base-R fallback uses qnorm(0.975)", has_qnorm)
+
+        # =========================================================
+        # TEST 11: estimateTau2_All produces all 17 methods
+        # =========================================================
+        print("\n[11] Testing estimateTau2_All (17 methods)...")
 
         all_methods = driver.execute_script("""
             var yi = AppState.results.yi;
@@ -409,9 +492,9 @@ try:
             check(f"tau2 method {m} produces value", val != 'MISSING' and val != 'error', f"tau2={val}")
 
         # =========================================================
-        # TEST 11: Verify no console errors from our code
+        # TEST 12: Verify no console errors from our code
         # =========================================================
-        print("\n[11] Checking console errors...")
+        print("\n[12] Checking console errors...")
         try:
             logs = driver.get_log('browser')
             severe = [l for l in logs if l['level'] == 'SEVERE']

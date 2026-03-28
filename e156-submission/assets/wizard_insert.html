@@ -1,0 +1,190 @@
+
+        <!-- HTA Wizard Interface -->
+        <div class="special-panel" style="background:linear-gradient(135deg,rgba(0,212,170,0.1) 0%,rgba(168,85,247,0.1) 100%);border:2px solid var(--accent);margin-top:32px;">
+            <div class="panel-title-color" style="color:var(--accent)">🧙 HTA Wizard - Progressive Disclosure Interface</div>
+
+            <!-- Progress Indicator -->
+            <div class="wizard-progress">
+                <div class="wizard-progress-bar">
+                    <div class="wizard-progress-fill" id="wizardProgressFill"></div>
+                </div>
+                <div class="wizard-steps-indicator">
+                    <div class="wizard-step-dot active" data-step="1">1</div>
+                    <div class="wizard-step-dot" data-step="2">2</div>
+                    <div class="wizard-step-dot" data-step="3">3</div>
+                    <div class="wizard-step-dot" data-step="4">4</div>
+                </div>
+            </div>
+
+            <!-- Step 1: Context -->
+            <div class="wizard-step" id="wizardStep1">
+                <h3 class="wizard-step-title">Step 1: Context</h3>
+                <p class="wizard-step-desc">Select the jurisdiction and decision type for your HTA assessment.</p>
+
+                <div class="form-grid" style="margin-top:20px;">
+                    <div class="form-group">
+                        <label>Jurisdiction <span class="help-tooltip" title="Select the regulatory authority that will use this HTA">ℹ️</span></label>
+                        <select id="htaJurisdiction" onchange="applyJurisdictionDefaults()">
+                            <option value="">-- Select Jurisdiction --</option>
+                            <option value="NICE">NICE (UK - National Institute for Health and Care Excellence)</option>
+                            <option value="GBA">G-BA (Germany - Federal Joint Committee)</option>
+                            <option value="TLV">TLV (Sweden - Dental and Pharmaceutical Benefits Agency)</option>
+                            <option value="HAS">HAS (France - Haute Autorité de Santé)</option>
+                            <option value="CADTH">CADTH (Canada - Canadian Agency for Drugs and Technologies in Health)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Decision Type <span class="help-tooltip" title="Type of decision being made">ℹ️</span></label>
+                        <select id="htaDecisionType">
+                            <option value="reimbursement">Reimbursement Decision</option>
+                            <option value="pricing">Pricing Decision</option>
+                            <option value="coverage">Coverage Decision</option>
+                            <option value="formulary">Formulary Inclusion</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="jurisdictionInfo" class="wizard-info-box" style="margin-top:16px;display:none;"></div>
+            </div>
+
+            <!-- Step 2: Evidence Requirements -->
+            <div class="wizard-step hidden" id="wizardStep2">
+                <h3 class="wizard-step-title">Step 2: Evidence Requirements</h3>
+                <p class="wizard-step-desc">Configure the evidence standards and population parameters.</p>
+
+                <div class="form-grid" style="margin-top:20px;">
+                    <div class="form-group">
+                        <label>Real-World Evidence Level <span class="help-tooltip" title="How much RWE is incorporated alongside RCT data">ℹ️</span></label>
+                        <select id="htaRweLevel">
+                            <option value="rct_only">RCT-Only (No RWE)</option>
+                            <option value="rwe_supplementary">RWE Supplementary</option>
+                            <option value="rwe_primary">RWE as Primary</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time Horizon (years) <span class="help-tooltip" title="Duration of the economic model">ℹ️</span></label>
+                        <input type="number" id="htaTimeHorizon" min="1" max="100" value="10" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Population Definition <span class="help-tooltip" title="Target population for the intervention">ℹ️</span></label>
+                        <select id="htaPopulation">
+                            <option value="full_indication">Full Licensed Indication</option>
+                            <option value="restricted">Restricted Subgroup</option>
+                            <option value="high_risk">High-Risk Only</option>
+                            <option value="treatment_naive">Treatment-Naive</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Eligible Cohort Size <span class="help-tooltip" title="Estimated number of eligible patients per year">ℹ️</span></label>
+                        <input type="number" id="htaCohortSize" min="1" placeholder="e.g., 10000" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Economic Parameters -->
+            <div class="wizard-step hidden" id="wizardStep3">
+                <h3 class="wizard-step-title">Step 3: Economic Parameters</h3>
+                <p class="wizard-step-desc">Set the economic model parameters and cost perspective.</p>
+
+                <div class="form-grid" style="margin-top:20px;">
+                    <div class="form-group">
+                        <label>Discount Rate (%) <span class="help-tooltip" title="Annual discount rate for costs and benefits">ℹ️</span></label>
+                        <input type="number" id="htaDiscountRate" min="0" max="10" step="0.1" value="3.5" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Perspective <span class="help-tooltip" title="Economic perspective for cost analysis">ℹ️</span></label>
+                        <select id="htaPerspective">
+                            <option value="payer">Payer/Healthcare System</option>
+                            <option value="societal">Societal (includes indirect costs)</option>
+                            <option value="patient">Patient</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cost Year <span class="help-tooltip" title="Reference year for cost data">ℹ️</span></label>
+                        <input type="number" id="htaCostYear" min="2000" max="2030" value="2024" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Currency <span class="help-tooltip" title="Local currency for reporting">ℹ️</span></label>
+                        <select id="htaCurrency">
+                            <option value="GBP">GBP (British Pound)</option>
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="CAD">CAD (Canadian Dollar)</option>
+                            <option value="USD">USD (US Dollar)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid" style="margin-top:16px;">
+                    <div class="form-group">
+                        <label>Willingness-to-Pay Threshold <span class="help-tooltip" title="Cost-effectiveness threshold per QALY/DALY">ℹ️</span></label>
+                        <input type="number" id="htaWtpThreshold" min="0" step="1000" placeholder="e.g., 20000" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Health Outcome Metric <span class="help-tooltip" title="Primary health outcome measure">ℹ️</span></label>
+                        <select id="htaOutcomeMetric">
+                            <option value="QALY">QALY (Quality-Adjusted Life Years)</option>
+                            <option value="DALY">DALY (Disability-Adjusted Life Years)</option>
+                            <option value="LYG">LYG (Life Years Gained)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="jurisdictionSpecific" class="wizard-info-box" style="margin-top:16px;"></div>
+            </div>
+
+            <!-- Step 4: Review & Generate -->
+            <div class="wizard-step hidden" id="wizardStep4">
+                <h3 class="wizard-step-title">Step 4: Review & Generate</h3>
+                <p class="wizard-step-desc">Review your selections and generate the HTA configuration.</p>
+
+                <div class="wizard-summary">
+                    <div class="summary-section">
+                        <h4>Context</h4>
+                        <div class="summary-item"><strong>Jurisdiction:</strong> <span id="summaryJurisdiction">--</span></div>
+                        <div class="summary-item"><strong>Decision Type:</strong> <span id="summaryDecisionType">--</span></div>
+                    </div>
+
+                    <div class="summary-section">
+                        <h4>Evidence Requirements</h4>
+                        <div class="summary-item"><strong>RWE Level:</strong> <span id="summaryRweLevel">--</span></div>
+                        <div class="summary-item"><strong>Time Horizon:</strong> <span id="summaryTimeHorizon">--</span> years</div>
+                        <div class="summary-item"><strong>Population:</strong> <span id="summaryPopulation">--</span></div>
+                        <div class="summary-item"><strong>Cohort Size:</strong> <span id="summaryCohortSize">--</span></div>
+                    </div>
+
+                    <div class="summary-section">
+                        <h4>Economic Parameters</h4>
+                        <div class="summary-item"><strong>Discount Rate:</strong> <span id="summaryDiscountRate">--</span>%</div>
+                        <div class="summary-item"><strong>Perspective:</strong> <span id="summaryPerspective">--</span></div>
+                        <div class="summary-item"><strong>Cost Year:</strong> <span id="summaryCostYear">--</span></div>
+                        <div class="summary-item"><strong>Currency:</strong> <span id="summaryCurrency">--</span></div>
+                        <div class="summary-item"><strong>WTP Threshold:</strong> <span id="summaryWtpThreshold">--</span></div>
+                        <div class="summary-item"><strong>Outcome Metric:</strong> <span id="summaryOutcomeMetric">--</span></div>
+                    </div>
+                </div>
+
+                <div style="margin-top:24px;text-align:center;">
+                    <button class="btn btn-primary" style="padding:14px 32px;font-size:1rem;" onclick="generateHTAPacks()">
+                        Generate HTA Configuration Pack
+                    </button>
+                </div>
+
+                <div id="htaOutput" class="wizard-output" style="margin-top:20px;display:none;"></div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="wizard-navigation">
+                <button class="btn btn-secondary" id="wizardPrevBtn" onclick="wizardNavigate(-1)" disabled>← Previous</button>
+                <button class="btn btn-primary" id="wizardNextBtn" onclick="wizardNavigate(1)">Next →</button>
+            </div>
+        </div>
+

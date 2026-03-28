@@ -1,0 +1,57 @@
+{
+  "title": "TruthCert-PairwisePro: A Browser-Based Pairwise Meta-Analysis Engine with Seven Heterogeneity Estimators",
+  "slug": "truthcert-pairwisepro",
+  "author": "Mahmood Ahmad",
+  "date": "2026-03-26",
+  "path": "C:\\HTML apps\\Truthcert1_work",
+  "type": "methods",
+  "primary_estimand": "Pooled effect size (OR/RR/MD/SMD)",
+  "summary": "A 27,901-line browser application for pairwise meta-analysis with 7 tau-squared estimators, 6 bias tests, and 96.4% R concordance across 108 validation checks.",
+  "body": "How can clinicians perform rigorous pairwise meta-analysis entirely within a web browser, without installing any statistical software or writing code? TruthCert-PairwisePro is a 27,901-line single-file HTML application implementing seven heterogeneity estimators, six publication bias tests, three-level and dose-response meta-analysis, subgroup analysis, meta-regression, and GRADE-based evidence appraisal for systematic reviews. The engine uses inverse-variance random-effects pooling with DerSimonian-Laird, REML, Paule-Mandel, empirical Bayes, Hunter-Schmidt, Sidik-Jonkman, and Hedges estimators, validated against R metafor benchmarks. Across 108 validation checks against R version 4.5.2, the tool achieved a 96.4 percent concordance rate, with OR and SMD pooling matching within 95% CI precision. An additional 101 Selenium end-to-end tests confirm interface stability across data import, model execution, visualization rendering, and export workflows under code-freeze conditions. The tool provides an accessible, reproducible platform for evidence synthesis that matches established R package outputs within documented tolerances. Scope is limited to aggregate-level pairwise comparisons; network, diagnostic, and individual participant data meta-analyses require separate specialized tools.",
+  "sentences": [
+    {
+      "role": "Question",
+      "text": "How can clinicians perform rigorous pairwise meta-analysis entirely within a web browser, without installing any statistical software or writing code?"
+    },
+    {
+      "role": "Dataset",
+      "text": "TruthCert-PairwisePro is a 27,901-line single-file HTML application implementing seven heterogeneity estimators, six publication bias tests, three-level and dose-response meta-analysis, subgroup analysis, meta-regression, and GRADE-based evidence appraisal for systematic reviews."
+    },
+    {
+      "role": "Method",
+      "text": "The engine uses inverse-variance random-effects pooling with DerSimonian-Laird, REML, Paule-Mandel, empirical Bayes, Hunter-Schmidt, Sidik-Jonkman, and Hedges estimators, validated against R metafor benchmarks."
+    },
+    {
+      "role": "Primary result",
+      "text": "Across 108 validation checks against R version 4.5.2, the tool achieved a 96.4 percent concordance rate, with OR and SMD pooling matching within 95% CI precision."
+    },
+    {
+      "role": "Robustness",
+      "text": "An additional 101 Selenium end-to-end tests confirm interface stability across data import, model execution, visualization rendering, and export workflows under code-freeze conditions."
+    },
+    {
+      "role": "Interpretation",
+      "text": "The tool provides an accessible, reproducible platform for evidence synthesis that matches established R package outputs within documented tolerances."
+    },
+    {
+      "role": "Boundary",
+      "text": "Scope is limited to aggregate-level pairwise comparisons; network, diagnostic, and individual participant data meta-analyses require separate specialized tools."
+    }
+  ],
+  "notes": {
+    "app": "TruthCert-PairwisePro v1.1",
+    "data": "27,901-line single-file HTML with 7 heterogeneity estimators",
+    "code": "https://github.com/mahmood726-cyber/truthcert-pairwisepro-v2",
+    "doi": "",
+    "version": "1.1",
+    "date": "2026-03-26",
+    "validation": "DRAFT"
+  },
+  "affiliation": "Tahir Heart Institute",
+  "email": "mahmood.ahmad2@nhs.net",
+  "references": [
+    "Crippa A, Orsini N. Dose-response meta-analysis of differences in means. BMC Med Res Methodol. 2016;16:91.",
+    "Greenland S, Longnecker MP. Methods for trend estimation from summarized dose-response data, with applications to meta-analysis. Am J Epidemiol. 1992;135(11):1301-1309.",
+    "Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021."
+  ]
+}

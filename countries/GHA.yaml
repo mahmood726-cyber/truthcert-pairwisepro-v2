@@ -1,0 +1,83 @@
+# Country Pack: Ghana (GHA)
+country:
+  iso3: "GHA"
+  name: "Ghana"
+  currency:
+    code: "GHS"
+    name: "Ghana cedi"
+  africa_extension:
+    enabled: true
+    A13_COUNTRIES: ["BEN", "BFA", "CIV", "GMB", "GHA", "KEN", "LBR", "NGA", "SLE", "ZAF", "SWZ", "TZA", "UGA"]
+    REGION_RULE: "trial_has_any_site_in_A13"
+    MIN_K_TARGET: 4
+    go_no_go:
+      go_if_k_extractable_ge: 4
+      caution_if_k_extractable_in: [2,3]
+      no_go_if_k_extractable_le: 1
+    pivot_policy:
+      enabled: true
+      rule: "use disease_group.pivot_if_k_lt_2"
+  jamaat_footprint:
+    summary: "Multiple Ahmadiyya hospitals/medical centers (e.g., Asokore, Daboase, Agona Swedru)"
+    assets:
+      - type: "hospital_or_clinic_or_mosque"
+        name: null
+        location: null
+        note: "Optional: list specific hospitals/clinics/mosques used as delivery nodes."
+  hta:
+    hta_defaults:
+      perspective_primary: "health_system"
+      perspectives_supported: ["health_system","societal_optional","donor_program"]
+      discounting:
+        costs: 0.03
+        outcomes: 0.03
+        sensitivity_grid: [0.00, 0.03, 0.05]
+      cost_year:
+        value: null
+        ne_code: "NE_COST_YEAR"
+        note: "Set to the local price year for all LCU costs."
+      currency_display:
+        mode: "LCU"  # always present LCU; can show USD as secondary conversion if exchange_rate provided
+        secondary: "USD_optional"
+      wtp_thresholds:
+        mode: "policy_defined"
+        default: null
+        note: "No universal threshold is assumed; provide local decision threshold(s) or use affordability + net health benefit framing."
+        sensitivity_only_reference:
+          enabled: false
+          options:
+            - name: "0.5x_GDPpc"
+            - name: "1x_GDPpc"
+            - name: "3x_GDPpc"
+          note: "Disabled by default due to well-known criticism of GDP-multiple thresholds."
+      uncertainty_gating_by_truthcert:
+        STABLE:
+          allow_full_hta: true
+          allow_psa: true
+          allow_voi: true
+        MODERATE:
+          allow_full_hta: true
+          allow_psa: true
+          allow_voi: true
+          caution: "Widen parameter uncertainty; emphasize regret & affordability."
+        EXPOSED:
+          allow_full_hta: "limited"
+          allow_psa: true
+          allow_voi: true
+          caution: "HTA outputs must be scenario-bounded and highlight structural uncertainty."
+        UNCERTAIN:
+          allow_full_hta: false
+          allow_psa: "only for affordability stress-tests"
+          allow_voi: true
+          caution: "Refuse precision: HTA outputs restricted to bounds, worst-case, and value-of-research."
+  local_inputs_required:
+    - "unit_costs_lcu"
+    - "target_population_size"
+    - "budget_envelope_lcu (for BIA/affordability modules)"
+    - "baseline_risk_or_incidence (or allow wide priors)"
+  local_currency_output:
+    always: true
+    formatting:
+      symbol: null
+      decimals: 2
+      thousand_sep: ","

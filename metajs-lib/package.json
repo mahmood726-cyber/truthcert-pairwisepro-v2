@@ -1,0 +1,39 @@
+{
+  "name": "metajs-analysis",
+  "version": "1.0.0",
+  "description": "A comprehensive JavaScript library for meta-analysis, validated against R metafor",
+  "main": "meta-analysis.js",
+  "bin": {
+    "metajs": "./cli.js"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "cli": "node cli.js"
+  },
+  "keywords": [
+    "meta-analysis",
+    "statistics",
+    "research",
+    "systematic-review",
+    "effect-size",
+    "heterogeneity",
+    "publication-bias",
+    "forest-plot",
+    "funnel-plot",
+    "metafor"
+  ],
+  "author": "TruthCert-PairwisePro Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/truthcert/metajs-analysis"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "meta-analysis.js",
+    "cli.js",
+    "README.md"
+  ]
+}

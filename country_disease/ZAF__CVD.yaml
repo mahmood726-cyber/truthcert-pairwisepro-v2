@@ -1,0 +1,11 @@
+# Country-Disease Pack: ZAF x CVD
+country_iso3: "ZAF"
+disease_group_code: "CVD"
+question_priorities:
+  primary: ["CVD-001"]
+  secondary: ["CVD-002"]
+context_penalties:
+  sigma_context:
+    value: 1.2
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "Default Africa-mode delivery-heterogeneity penalty applied in decision layer only."

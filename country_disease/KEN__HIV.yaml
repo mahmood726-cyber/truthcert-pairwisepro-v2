@@ -1,0 +1,11 @@
+# Country-Disease Pack: KEN x HIV
+country_iso3: "KEN"
+disease_group_code: "HIV"
+question_priorities:
+  primary: ["HIV-001","HIV-002"]
+  secondary: ["HIV-003"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

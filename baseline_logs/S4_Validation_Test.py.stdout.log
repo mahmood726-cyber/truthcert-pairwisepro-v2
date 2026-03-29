@@ -1,0 +1,66 @@
+======================================================================
+TruthCert-PairwisePro Validation Test
+Comparing JavaScript outputs to R metafor 4.8.0
+======================================================================
+
+Started: 2026-02-23T20:23:27.894838
+
+----------------------------------------------------------------------
+SECTION 1: BCG DATASET VALIDATION
+----------------------------------------------------------------------
+
+Loading BCG demo dataset...
+Running analysis...
+[OK] Results generated
+
+1.1 Effect Size Calculations (Log Odds Ratio)
+  [PASS] Study 1 yi: JS=-0.938694, R=-0.938694
+  [PASS] Study 2 yi: JS=-1.666191, R=-1.666191
+  [PASS] Study 3 yi: JS=-1.386294, R=-1.386294
+  [PASS] Study 4 yi: JS=-1.456444, R=-1.456444
+  [PASS] Study 5 yi: JS=-0.219141, R=-0.219141
+  [FAIL] Study 6 yi: JS=-0.682148, R=-0.958122
+
+1.2 tau² Estimators
+  [FAIL] DL: JS=0.251009, R=0.366343
+  [FAIL] REML: JS=0.256404, R=0.337772
+  [FAIL] ML: JS=0.199176, R=0.302457
+  [FAIL] PM: JS=0.199176, R=0.341176
+  [FAIL] HS: JS=0.141288, R=0.268250
+  [FAIL] SJ: JS=0.075496, R=0.368420
+  [FAIL] HE: JS=0.119240, R=0.349453
+  [FAIL] EB: JS=0.082183, R=0.341205
+
+1.3 REML Primary Results
+  [FAIL] estimate: NULL
+  [FAIL] se: NULL
+  [FAIL] tau2: JS=0.256404, R=0.337772
+  [FAIL] I2: NULL
+  [FAIL] Q: NULL
+
+1.4 HKSJ Adjustment
+
+CRITICAL ERROR: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="useHKSJ"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+

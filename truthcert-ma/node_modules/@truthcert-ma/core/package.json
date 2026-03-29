@@ -1,0 +1,60 @@
+{
+  "name": "@truthcert-ma/core",
+  "version": "1.0.0",
+  "description": "Core statistical engine for meta-analysis",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./effect-size": {
+      "require": "./dist/effect-size/index.js",
+      "default": "./dist/effect-size/index.js",
+      "types": "./dist/effect-size/index.d.ts"
+    },
+    "./pooling": {
+      "require": "./dist/pooling/index.js",
+      "default": "./dist/pooling/index.js",
+      "types": "./dist/pooling/index.d.ts"
+    },
+    "./bias": {
+      "require": "./dist/bias/index.js",
+      "default": "./dist/bias/index.js",
+      "types": "./dist/bias/index.d.ts"
+    },
+    "./clinical": {
+      "require": "./dist/clinical/index.js",
+      "default": "./dist/clinical/index.js",
+      "types": "./dist/clinical/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "meta-analysis",
+    "statistics",
+    "evidence-synthesis",
+    "systematic-review",
+    "metafor",
+    "forest-plot",
+    "heterogeneity"
+  ],
+  "author": "TruthCert Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/truthcert/truthcert-ma.git",
+    "directory": "packages/core"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  }
+}

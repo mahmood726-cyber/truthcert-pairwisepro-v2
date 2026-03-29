@@ -1,0 +1,89 @@
+{
+  "tolerance": {
+    "three_level": {
+      "theta": 0.03,
+      "se": 0.06,
+      "ci": 0.12,
+      "tau2_within": 0.08,
+      "tau2_between": 0.08
+    },
+    "one_stage_ipd_binary": {
+      "theta": 0.03,
+      "se": 0.06,
+      "ci": 0.12,
+      "tau2": 0.12
+    }
+  },
+  "datasets": [
+    {
+      "name": "three_level_case_balanced",
+      "three_level": {
+        "method": "REML",
+        "effects": [
+          { "cluster_id": "A", "study_id": "A1", "yi": -0.24, "vi": 0.040 },
+          { "cluster_id": "A", "study_id": "A1", "yi": -0.18, "vi": 0.045 },
+          { "cluster_id": "A", "study_id": "A2", "yi": -0.15, "vi": 0.035 },
+          { "cluster_id": "A", "study_id": "A2", "yi": -0.10, "vi": 0.030 },
+          { "cluster_id": "B", "study_id": "B1", "yi": -0.31, "vi": 0.060 },
+          { "cluster_id": "B", "study_id": "B1", "yi": -0.27, "vi": 0.055 },
+          { "cluster_id": "B", "study_id": "B2", "yi": -0.20, "vi": 0.045 },
+          { "cluster_id": "B", "study_id": "B2", "yi": -0.22, "vi": 0.047 },
+          { "cluster_id": "C", "study_id": "C1", "yi": -0.08, "vi": 0.040 },
+          { "cluster_id": "C", "study_id": "C1", "yi": -0.05, "vi": 0.038 },
+          { "cluster_id": "C", "study_id": "C2", "yi": -0.12, "vi": 0.050 },
+          { "cluster_id": "C", "study_id": "C2", "yi": -0.09, "vi": 0.048 }
+        ]
+      }
+    },
+    {
+      "name": "three_level_case_heterogeneous",
+      "three_level": {
+        "method": "REML",
+        "effects": [
+          { "cluster_id": "X", "study_id": "X1", "yi": 0.05, "vi": 0.030 },
+          { "cluster_id": "X", "study_id": "X1", "yi": 0.10, "vi": 0.028 },
+          { "cluster_id": "X", "study_id": "X2", "yi": -0.02, "vi": 0.032 },
+          { "cluster_id": "X", "study_id": "X2", "yi": 0.01, "vi": 0.029 },
+          { "cluster_id": "Y", "study_id": "Y1", "yi": -0.30, "vi": 0.050 },
+          { "cluster_id": "Y", "study_id": "Y1", "yi": -0.25, "vi": 0.048 },
+          { "cluster_id": "Y", "study_id": "Y2", "yi": -0.18, "vi": 0.042 },
+          { "cluster_id": "Y", "study_id": "Y2", "yi": -0.12, "vi": 0.040 },
+          { "cluster_id": "Z", "study_id": "Z1", "yi": 0.22, "vi": 0.044 },
+          { "cluster_id": "Z", "study_id": "Z1", "yi": 0.18, "vi": 0.041 },
+          { "cluster_id": "Z", "study_id": "Z2", "yi": 0.05, "vi": 0.037 },
+          { "cluster_id": "Z", "study_id": "Z2", "yi": 0.09, "vi": 0.039 }
+        ]
+      }
+    },
+    {
+      "name": "ipd_binary_case_balanced",
+      "one_stage_ipd_binary": {
+        "measure": "OR",
+        "model": "UM.RS",
+        "study_2x2": [
+          { "study_id": "S1", "ai": 35, "bi": 65, "ci": 45, "di": 55 },
+          { "study_id": "S2", "ai": 22, "bi": 78, "ci": 30, "di": 70 },
+          { "study_id": "S3", "ai": 40, "bi": 60, "ci": 52, "di": 48 },
+          { "study_id": "S4", "ai": 18, "bi": 82, "ci": 25, "di": 75 },
+          { "study_id": "S5", "ai": 27, "bi": 73, "ci": 34, "di": 66 },
+          { "study_id": "S6", "ai": 31, "bi": 69, "ci": 36, "di": 64 }
+        ]
+      }
+    },
+    {
+      "name": "ipd_binary_case_sparse",
+      "one_stage_ipd_binary": {
+        "measure": "OR",
+        "model": "UM.RS",
+        "study_2x2": [
+          { "study_id": "R1", "ai": 0, "bi": 40, "ci": 2, "di": 38 },
+          { "study_id": "R2", "ai": 1, "bi": 49, "ci": 3, "di": 47 },
+          { "study_id": "R3", "ai": 0, "bi": 35, "ci": 1, "di": 34 },
+          { "study_id": "R4", "ai": 2, "bi": 58, "ci": 4, "di": 56 },
+          { "study_id": "R5", "ai": 1, "bi": 44, "ci": 2, "di": 43 },
+          { "study_id": "R6", "ai": 0, "bi": 28, "ci": 1, "di": 27 }
+        ]
+      }
+    }
+  ]
+}

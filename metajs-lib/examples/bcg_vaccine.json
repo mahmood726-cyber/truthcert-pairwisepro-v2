@@ -1,0 +1,49 @@
+{
+  "name": "BCG Vaccine for TB Prevention",
+  "description": "Meta-analysis of BCG vaccine trials (subset from Colditz et al. 1994)",
+  "measure": "OR",
+  "studies": [
+    {
+      "study": "Aronson 1948",
+      "events_t": 4,
+      "n_t": 123,
+      "events_c": 11,
+      "n_c": 139
+    },
+    {
+      "study": "Ferguson 1949",
+      "events_t": 6,
+      "n_t": 306,
+      "events_c": 29,
+      "n_c": 303
+    },
+    {
+      "study": "Rosenthal 1960",
+      "events_t": 3,
+      "n_t": 231,
+      "events_c": 11,
+      "n_c": 220
+    },
+    {
+      "study": "Hart 1977",
+      "events_t": 62,
+      "n_t": 13598,
+      "events_c": 248,
+      "n_c": 12867
+    },
+    {
+      "study": "Frimodt-Moller 1973",
+      "events_t": 33,
+      "n_t": 5069,
+      "events_c": 47,
+      "n_c": 5808
+    },
+    {
+      "study": "Comstock 1974",
+      "events_t": 180,
+      "n_t": 16913,
+      "events_c": 372,
+      "n_c": 17854
+    }
+  ]
+}

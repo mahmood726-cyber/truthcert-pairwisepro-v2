@@ -1,0 +1,44 @@
+{
+  "name": "@truthcert-ma/cli",
+  "version": "1.0.0",
+  "description": "Command-line interface for TruthCert-MA meta-analysis",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "truthcert-ma": "./dist/cli.js",
+    "tcma": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@truthcert-ma/core": "file:../core",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "csv-parse": "^5.5.2",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "table": "^6.8.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.6",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "meta-analysis",
+    "statistics",
+    "cli",
+    "research",
+    "evidence-synthesis"
+  ]
+}

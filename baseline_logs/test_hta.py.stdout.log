@@ -1,0 +1,36 @@
+============================================================
+TruthCert-PairwisePro - HTA Tab Test
+============================================================
+
+[*] Starting Chrome...
+[*] Loading: file:///C:/Truthcert1/TruthCert-PairwisePro-v1.0-bundle.html
+
+[STEP 1] Loading demo data...
+  No prompt dialog - demo may have loaded automatically
+
+[STEP 2] Running analysis...
+  Alert: At least 2 valid studies are required for meta-ana...
+  Analysis completed
+
+[STEP 3] Checking TruthCert verdict...
+  Verdict panel has content
+
+[STEP 4] Navigating to HTA tab...
+  Clicked HTA tab
+
+[STEP 5] Checking HTA panel state...
+  Prerequisites section display: block
+  Config section display: none
+
+  [!] HTA Config is HIDDEN - Prerequisites not met
+  This could mean:
+    - TruthCert verdict is UNCERTAIN (Tier D)
+    - Verdict wasn't computed yet
+    - There's a bug in the prerequisite check
+
+[STEP 7] Checking for JavaScript errors...
+  No severe JS errors
+
+============================================================
+Test complete. Browser left open for inspection.
+============================================================

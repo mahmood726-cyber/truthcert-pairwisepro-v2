@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "updated_utc": "2026-03-03T00:00:00Z",
+  "scope": "pairwise_meta_analysis",
+  "tau2_methods": {
+    "ui_exposed": [
+      "REML",
+      "DL",
+      "PM",
+      "PMM",
+      "ML",
+      "HS",
+      "HSk",
+      "SJ",
+      "HE",
+      "EB",
+      "GENQ",
+      "GENQM",
+      "PL",
+      "DL2",
+      "CA",
+      "BMM",
+      "QG"
+    ],
+    "metafor_oracle_supported": [
+      "DL",
+      "REML",
+      "ML",
+      "PM",
+      "PMM",
+      "HS",
+      "HSk",
+      "SJ",
+      "HE",
+      "EB",
+      "GENQ",
+      "GENQM"
+    ],
+    "custom_not_in_metafor": [
+      "PL",
+      "DL2",
+      "CA",
+      "BMM",
+      "QG"
+    ]
+  },
+  "oracle_requirements": {
+    "pairwise_failures_must_be_zero": true,
+    "missing_method_entries_must_be_zero": true,
+    "glmm_failures_must_be_zero": true
+  },
+  "notes": [
+    "R oracle uses metafor as external reference where method support exists.",
+    "Methods not supported by metafor are tracked explicitly as custom methods and require separate internal/external validation tracks."
+  ]
+}

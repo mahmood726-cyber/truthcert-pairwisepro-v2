@@ -1,0 +1,348 @@
+================================================================================
+PLOS ONE SUBMISSION FORM - COMPLETE INFORMATION
+================================================================================
+
+================================================================================
+ARTICLE TYPE SELECTION
+================================================================================
+
+Selected Type: RESEARCH ARTICLE
+Subtype: Methods and Software Study
+
+Justification: This manuscript reports the development and validation of original
+software for meta-analysis, including quantitative validation studies (Monte Carlo
+simulation, comparison with R metafor). It meets Research Article criteria as it
+presents primary research with novel methodology.
+
+================================================================================
+ATTACH FILES - FILE LIST
+================================================================================
+
+File 1:
+  Filename: Cover_Letter.docx
+  Item Type: Cover Letter
+  Description: Cover letter to editors
+
+File 2:
+  Filename: TruthCert_PairwisePro_Manuscript.docx
+  Item Type: Manuscript
+  Description: Main manuscript text with tables
+
+File 3:
+  Filename: Figure1_UserInterface.tif
+  Item Type: Figure
+  Description: Figure 1. TruthCert-PairwisePro user interface showing data entry,
+               forest plot, verdict classification, and threat ledger
+
+File 4:
+  Filename: Figure2_VerdictAlgorithm.tif
+  Item Type: Figure
+  Description: Figure 2. Verdict classification algorithm flowchart with 12-point
+               threat assessment
+
+File 5:
+  Filename: Figure3_ValidationResults.tif
+  Item Type: Figure
+  Description: Figure 3. Validation results: Bland-Altman plot, MCID sensitivity,
+               ROC curve, Type I error analysis
+
+File 6:
+  Filename: Figure4_HTA_Module.tif
+  Item Type: Figure
+  Description: Figure 4. Health Technology Assessment module outputs for SGLT2
+               inhibitor case study
+
+File 7:
+  Filename: Figure5_Workflow.tif
+  Item Type: Figure
+  Description: Figure 5. Complete analytical workflow from data entry to HTA
+               recommendation
+
+File 8:
+  Filename: S1_File_Technical_Documentation.pdf
+  Item Type: Supporting Information
+  Description: S1 File. Technical documentation of statistical algorithms
+
+File 9:
+  Filename: S2_File_Monte_Carlo_Protocol.pdf
+  Item Type: Supporting Information
+  Description: S2 File. Monte Carlo simulation protocol with Mulberry32 PRNG code
+
+File 10:
+  Filename: S3_File_R_Validation.zip
+  Item Type: Supporting Information
+  Description: S3 File. R validation code and reference values (contains .R script
+               and .txt output)
+
+File 11:
+  Filename: S4_File_HTA_Validation.pdf
+  Item Type: Supporting Information
+  Description: S4 File. HTA module validation against TreeAge Pro (82 tests)
+
+File 12:
+  Filename: S5_File_User_Guide.pdf
+  Item Type: Supporting Information
+  Description: S5 File. User guide with annotated screenshots
+
+================================================================================
+GENERAL INFORMATION - CATEGORY
+================================================================================
+
+Primary Category: Research and Analysis Methods
+Secondary Category: Mathematical and Statistical Techniques > Statistical Methods
+Tertiary Category: Metaanalysis
+
+Alternative categories if above not available:
+- Medicine and Health Sciences > Health Care > Health Information Technology
+- Computer and Information Sciences > Software Engineering
+
+================================================================================
+KEYWORDS
+================================================================================
+
+meta-analysis; evidence synthesis; health technology assessment; decision support;
+software validation; GRADE; random effects model; heterogeneity; publication bias;
+browser-based application; open source
+
+================================================================================
+REVIEW PREFERENCES
+================================================================================
+
+Opposed Editors: None
+
+Opposed Reviewers: None
+
+Recommended Academic Editors (select 2-5 from Editorial Board):
+1. [Search for editor with "meta-analysis" expertise]
+2. [Search for editor with "evidence synthesis" expertise]
+3. [Search for editor with "health economics" or "HTA" expertise]
+4. [Search for editor with "biostatistics" expertise]
+5. [Search for editor with "software" or "methods" expertise]
+
+================================================================================
+ADDITIONAL INFORMATION - REQUIRED STATEMENTS
+================================================================================
+
+Statement 1 - Reporting Requirements and Data Availability:
+[X] I confirm that I have read and agree with PLOS ONE's data availability policy
+
+Statement 2 - Related Manuscripts:
+[X] I confirm this manuscript is not under consideration elsewhere and no related
+    manuscripts are under review or in press
+
+Statement 3 - Acknowledgments:
+[X] I confirm all individuals named in the Acknowledgments section have given
+    permission to be acknowledged
+
+Statement 4 - Authorship:
+[X] I confirm all authors meet ICMJE authorship criteria and have approved the
+    final manuscript
+
+Statement 5 - US Government Employee:
+[ ] No authors are US Government employees
+    (If YES, article will use CC0 license)
+
+================================================================================
+FINANCIAL DISCLOSURE
+================================================================================
+
+The author(s) received no specific funding for this work.
+
+[OR if funded:]
+
+This work was supported by [FUNDER NAME] (grant number [GRANT NUMBER]). The
+funder had no role in study design, data collection and analysis, decision to
+publish, or preparation of the manuscript.
+
+================================================================================
+COMPETING INTERESTS STATEMENT
+================================================================================
+
+The authors have declared that no competing interests exist.
+
+[OR if competing interests exist:]
+
+[AUTHOR NAME] is the developer of TruthCert-PairwisePro software described in
+this manuscript. The software is freely available under MIT open-source license
+and the author receives no financial benefit from its use or distribution.
+
+================================================================================
+ETHICS STATEMENT
+================================================================================
+
+Not applicable. This study describes software development and validation using
+only previously published, publicly available datasets. No human subjects,
+animals, or identifiable data were involved in this research.
+
+================================================================================
+FIGURE GUIDELINES CONFIRMATION
+================================================================================
+
+[X] I confirm that all figures comply with PLOS ONE image preparation guidelines
+[X] Figures are in TIFF or EPS format
+[X] Resolution is 300-600 ppi
+[X] No figures exceed 10MB
+[X] No inappropriate image manipulation has occurred
+
+================================================================================
+COPYRIGHTED FIGURES
+================================================================================
+
+[X] None of the figures contain copyrighted material
+[X] All figures were created by the authors for this manuscript
+
+================================================================================
+DUAL PUBLICATION STATEMENT
+================================================================================
+
+No elements of this manuscript have been published or are under consideration
+for publication elsewhere. The software described (TruthCert-PairwisePro) is
+available on GitHub but has not been described in any peer-reviewed publication.
+
+================================================================================
+CALLS FOR PAPERS / COLLECTIONS
+================================================================================
+
+Not applicable / Not submitting to a specific collection
+
+[OR if applicable:]
+Collection title: [ENTER COLLECTION NAME]
+
+================================================================================
+NEW SPECIES
+================================================================================
+
+Not applicable - no new taxa described
+
+================================================================================
+DATA AVAILABILITY STATEMENT
+================================================================================
+
+All relevant data are within the manuscript and its Supporting Information files.
+
+The software source code is available at:
+https://github.com/[USERNAME]/TruthCert-PairwisePro
+
+Validation datasets used:
+- BCG Vaccine dataset: Available in R metafor package (dat.bcg)
+- Magnesium MI dataset: Extracted from Teo et al. (1991) BMJ, publicly available
+- SGLT2i dataset: Extracted from published clinical trial reports (cited in manuscript)
+- All other datasets: Provided in Supporting Information files
+
+R validation code: Provided in S3 File
+
+Monte Carlo simulation code: Provided in S2 File with seed (20240101) for
+exact reproducibility
+
+================================================================================
+PUBLICATION FEES
+================================================================================
+
+Payment method: [SELECT ONE]
+- [ ] Credit card
+- [ ] Invoice to institution
+- [ ] Applying for fee assistance (complete fee assistance form)
+
+Fee assistance eligibility (if applying):
+- [ ] Research funded by organizations in Group 1 countries
+- [ ] Corresponding author based in Group 2 country
+- [ ] Other hardship circumstances
+
+================================================================================
+PREPRINT POSTING
+================================================================================
+
+[ ] Manuscript is NOT currently posted on a preprint server
+
+[OR]
+
+[ ] Manuscript IS posted on preprint server
+    Server: [bioRxiv / medRxiv / other]
+    DOI or identifier: [ENTER DOI]
+
+Option to post preprint via PLOS:
+[ ] Yes, forward submission to bioRxiv/medRxiv for preprint posting
+[ ] No, do not post as preprint
+
+================================================================================
+GROUP AUTHORS AND CONSORTIA
+================================================================================
+
+Not applicable - no group authors or consortia
+
+================================================================================
+COMMENTS TO JOURNAL OFFICE
+================================================================================
+
+[Leave blank unless specific communication needed]
+
+================================================================================
+MANUSCRIPT DATA - VERIFICATION
+================================================================================
+
+Title: TruthCert-PairwisePro: A Browser-Based Meta-Analysis Platform with
+       Verdict Classification and Integrated Health Technology Assessment
+
+Running title: TruthCert-PairwisePro Meta-Analysis Platform
+
+Abstract: [Verify extracted abstract matches manuscript - ~250 words]
+
+================================================================================
+AUTHOR LIST
+================================================================================
+
+Author 1 (Corresponding Author):
+  First name: [ENTER]
+  Last name: [ENTER]
+  Email: [ENTER]
+  Institution: [ENTER FULL INSTITUTION NAME]
+  Department: [ENTER]
+  City: [ENTER]
+  Country: [ENTER]
+  ORCID: [ENTER - format: 0000-0000-0000-0000]
+
+  Contributions (select all that apply):
+  [X] Conceptualization
+  [X] Data curation
+  [X] Formal analysis
+  [X] Funding acquisition (if applicable)
+  [X] Investigation
+  [X] Methodology
+  [X] Project administration
+  [X] Resources
+  [X] Software
+  [X] Supervision
+  [X] Validation
+  [X] Visualization
+  [X] Writing – original draft
+  [X] Writing – review & editing
+
+  [X] This is the corresponding author
+
+[Add additional authors as needed with same fields]
+
+================================================================================
+SUBMISSION CHECKLIST
+================================================================================
+
+Before clicking "Build PDF for Approval":
+
+[ ] Cover letter uploaded
+[ ] Manuscript uploaded (DOCX format)
+[ ] All 5 figures uploaded (TIFF, 300-600 ppi)
+[ ] All 5 supporting information files uploaded
+[ ] Category selected
+[ ] Keywords entered
+[ ] All 5 required statements checked
+[ ] Financial disclosure complete
+[ ] Competing interests statement complete
+[ ] Ethics statement complete (or N/A confirmed)
+[ ] Figure guidelines confirmed
+[ ] Data availability statement complete
+[ ] Publication fee payment method selected
+[ ] Author list complete with contributions
+[ ] All fields verified
+
+================================================================================
+END OF SUBMISSION FORM INFORMATION
+================================================================================

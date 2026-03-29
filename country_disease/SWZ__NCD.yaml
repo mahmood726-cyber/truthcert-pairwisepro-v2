@@ -1,0 +1,11 @@
+# Country-Disease Pack: SWZ x NCD
+country_iso3: "SWZ"
+disease_group_code: "NCD"
+question_priorities:
+  primary: ["NCD-001"]
+  secondary: ["NCD-002"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

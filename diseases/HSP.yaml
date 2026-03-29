@@ -1,0 +1,46 @@
+# Disease Pack: Health Systems & Policy (HSP)
+disease_group:
+  code: "HSP"
+  name: "Health Systems & Policy"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: true
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "HSP-001"
+    title: "Pay-for-performance vs standard financing"
+    population: "Primary care facilities"
+    intervention_a: "P4P incentives"
+    comparator_b: "Standard financing"
+    primary_outcome: "Coverage of key services (composite)"
+    effect_measure: "SMD"
+    followup_window: "12–36 months"
+    mcid:
+      type: "SMD"
+      value: 0.2
+      note: "SMD≥0.20 meaningful"
+    harms_watchlist: ["gaming"]
+    implementation_notes: "Audit + unintended consequences checks"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "HSP-002"
+  - qid: "HSP-002"
+    title: "CHW scale-up vs status quo"
+    population: "District-level population"
+    intervention_a: "CHW scale-up program"
+    comparator_b: "Status quo"
+    primary_outcome: "Under-5 mortality (or service coverage)"
+    effect_measure: "log(RR)"
+    followup_window: "12–60 months"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "RR≤0.90 meaningful"
+    harms_watchlist: ["workforce_burnout"]
+    implementation_notes: "Supervision + supply chains"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "HSP-001"

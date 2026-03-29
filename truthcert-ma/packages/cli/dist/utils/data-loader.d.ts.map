@@ -1,0 +1,1 @@
+{"version":3,"file":"data-loader.d.ts","sourceRoot":"","sources":["../../src/utils/data-loader.ts"],"names":[],"mappings":"AAIA,KAAK,GAAG,GAAG,MAAM,CAAC,MAAM,EAAE,OAAO,CAAC,CAAC;AA+JnC,wBAAgB,cAAc,CAAC,IAAI,EAAE,GAAG,EAAE,GAAG,QAAQ,GAAG,QAAQ,GAAG,YAAY,GAAG,SAAS,CAS1F;AAED,wBAAsB,QAAQ,CAAC,QAAQ,EAAE,MAAM,GAAG,OAAO,CAAC,GAAG,EAAE,CAAC,CAoB/D"}

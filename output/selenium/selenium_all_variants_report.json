@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-03-06T16:06:16.278035+00:00",
+  "root": "C:\\HTML apps\\Truthcert1_work",
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "publishable_smoke": true
+  },
+  "results": [
+    {
+      "file": "TruthCert-PairwisePro-v1.0.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0.html",
+      "started_at": "2026-03-06T16:05:06.708877+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:05:16.787349+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-fast.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-fast.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-fast.html",
+      "started_at": "2026-03-06T16:05:16.788014+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:05:26.829078+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-bundle.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-bundle.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-bundle.html",
+      "started_at": "2026-03-06T16:05:26.829593+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:05:36.880379+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-dist.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-dist.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-dist.html",
+      "started_at": "2026-03-06T16:05:36.881431+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:05:46.759278+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-min.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-min.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-min.html",
+      "started_at": "2026-03-06T16:05:46.760236+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:05:56.465657+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-optimized.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-optimized.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-optimized.html",
+      "started_at": "2026-03-06T16:05:56.467185+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:06:06.288605+00:00"
+    },
+    {
+      "file": "TruthCert-PairwisePro-v1.0-production.html",
+      "path": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0-production.html",
+      "url": "file:///C:/HTML apps/Truthcert1_work/TruthCert-PairwisePro-v1.0-production.html",
+      "started_at": "2026-03-06T16:06:06.289394+00:00",
+      "missing_ids": [],
+      "demo": {
+        "ok": true,
+        "method": "loadDemoDataset:SGLT2_CV_DEATH_HFPEF",
+        "rows": 2
+      },
+      "analysis": {
+        "ok": true,
+        "results_available": true
+      },
+      "severe_console_errors": [],
+      "ok": true,
+      "finished_at": "2026-03-06T16:06:16.278013+00:00"
+    }
+  ]
+}

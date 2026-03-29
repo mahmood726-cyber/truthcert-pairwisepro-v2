@@ -1,0 +1,41 @@
+{
+  "name": "truthcert-ma-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TruthCert Meta-Analysis - A comprehensive JavaScript library for meta-analysis",
+  "author": "TruthCert Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/truthcert/truthcert-ma.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:core && npm run build:cli",
+    "build:core": "npm run build -w @truthcert-ma/core",
+    "build:cli": "npm run build -w @truthcert-ma/cli",
+    "build:browser": "node -e \"console.log('No @truthcert-ma/browser workspace configured')\"",
+    "test": "npm run test --workspaces",
+    "test:unit": "vitest run",
+    "test:validation": "node tests/validation/run.js",
+    "lint": "eslint packages/*/src/**/*.ts",
+    "clean": "rimraf packages/*/dist",
+    "docs": "typedoc",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "esbuild": "^0.19.8",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "typedoc": "^0.25.4",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

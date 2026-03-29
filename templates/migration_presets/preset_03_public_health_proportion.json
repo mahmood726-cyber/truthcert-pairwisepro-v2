@@ -1,0 +1,25 @@
+{
+  "preset_id": "preset_03_public_health_proportion",
+  "name": "Public Health Proportion Workflow",
+  "intended_use": "Proportion/rate-focused evidence synthesis",
+  "settings": {
+    "dataType": "proportion",
+    "effectMeasure": "RD",
+    "tau2Method": "GENQ",
+    "hksj": true,
+    "continuityCorrection": 0.5
+  },
+  "advanced_actions": [
+    "runPowerAnalysis",
+    "runGRADEAssessment"
+  ],
+  "required_exports": [
+    "exportTruthCertRunManifest",
+    "exportTruthCertAuditBundle"
+  ],
+  "acceptance_checks": [
+    "Heterogeneity and power reviewed",
+    "GRADE output generated",
+    "Manifest stored with run"
+  ]
+}

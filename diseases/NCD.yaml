@@ -1,0 +1,46 @@
+# Disease Pack: Non-Communicable Diseases (general) (NCD)
+disease_group:
+  code: "NCD"
+  name: "Non-Communicable Diseases (general)"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: false
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "NCD-001"
+    title: "Task-shifting chronic care vs usual care"
+    population: "Adults with chronic NCDs (mixed: HTN/DM)"
+    intervention_a: "CHW/nurse-led follow-up + protocolized care"
+    comparator_b: "Usual facility follow-up"
+    primary_outcome: "All-cause hospitalization (or composite)"
+    effect_measure: "log(RR)"
+    followup_window: "6–24 months"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "RR≤0.90 meaningful"
+    harms_watchlist: ["med_error"]
+    implementation_notes: "Training/supervision; safety triggers"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "CVD-001"
+  - qid: "NCD-002"
+    title: "mHealth self-management vs usual care"
+    population: "Adults with diabetes or hypertension"
+    intervention_a: "mHealth coaching/app/SMS"
+    comparator_b: "Usual care"
+    primary_outcome: "Disease control (HbA1c or BP control)"
+    effect_measure: "SMD"
+    followup_window: "6–12 months"
+    mcid:
+      type: "SMD"
+      value: 0.2
+      note: "SMD≥0.20 meaningful"
+    harms_watchlist: ["digital_exclusion"]
+    implementation_notes: "Equity check: phone access; literacy"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "NCD-001"

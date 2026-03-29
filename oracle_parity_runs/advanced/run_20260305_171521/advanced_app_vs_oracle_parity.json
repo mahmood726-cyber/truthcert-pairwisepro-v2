@@ -1,0 +1,252 @@
+{
+  "generated_at": "2026-03-05T17:15:27.457189",
+  "html": "C:\\HTML apps\\Truthcert1_work\\TruthCert-PairwisePro-v1.0.html",
+  "oracle_input": "C:\\HTML apps\\Truthcert1_work\\benchmark_pack\\oracle_input_advanced_v1.json",
+  "oracle_output": "C:\\HTML apps\\Truthcert1_work\\oracle_parity_runs\\advanced\\run_20260305_171521\\oracle_advanced_output.json",
+  "datasets": [
+    {
+      "name": "three_level_case_balanced",
+      "methods": [
+        {
+          "method": "three_level",
+          "status": "pass",
+          "comparison": {
+            "theta": {
+              "r": -0.1588,
+              "app": -0.15882393472194106,
+              "abs_diff": 2.3934721941065717e-05,
+              "pass": true,
+              "tol": 0.03
+            },
+            "se": {
+              "r": 0.0598,
+              "app": 0.059801659572896085,
+              "abs_diff": 1.6595728960858147e-06,
+              "pass": true,
+              "tol": 0.06
+            },
+            "ci_lower": {
+              "r": -0.276,
+              "app": -0.27603518748481737,
+              "abs_diff": 3.5187484817345016e-05,
+              "pass": true,
+              "tol": 0.12
+            },
+            "ci_upper": {
+              "r": -0.0416,
+              "app": -0.04161268195906474,
+              "abs_diff": 1.2681959064744786e-05,
+              "pass": true,
+              "tol": 0.12
+            },
+            "tau2_within": {
+              "r": 1.4058e-11,
+              "app": 0.0,
+              "abs_diff": 1.4058e-11,
+              "pass": true,
+              "tol": 0.08
+            },
+            "tau2_between": {
+              "r": 0.0,
+              "app": 0.0,
+              "abs_diff": 0.0,
+              "pass": true,
+              "tol": 0.08
+            }
+          },
+          "app": {
+            "ci_lower": -0.27603518748481737,
+            "ci_upper": -0.04161268195906474,
+            "converged": true,
+            "method": "Three-Level RE (WASM likelihood + CRVE)",
+            "se": 0.059801659572896085,
+            "tau2_between": 0,
+            "tau2_total": 0,
+            "tau2_within": 0,
+            "theta": -0.15882393472194106
+          }
+        }
+      ]
+    },
+    {
+      "name": "three_level_case_heterogeneous",
+      "methods": [
+        {
+          "method": "three_level",
+          "status": "pass",
+          "comparison": {
+            "theta": {
+              "r": -0.0089,
+              "app": -0.0015016163259379766,
+              "abs_diff": 0.007398383674062023,
+              "pass": true,
+              "tol": 0.03
+            },
+            "se": {
+              "r": 0.0965,
+              "app": 0.09378811090602221,
+              "abs_diff": 0.002711889093977793,
+              "pass": true,
+              "tol": 0.06
+            },
+            "ci_lower": {
+              "r": -0.1979,
+              "app": -0.18532631370174152,
+              "abs_diff": 0.012573686298258474,
+              "pass": true,
+              "tol": 0.12
+            },
+            "ci_upper": {
+              "r": 0.1802,
+              "app": 0.18232308104986555,
+              "abs_diff": 0.002123081049865555,
+              "pass": true,
+              "tol": 0.12
+            },
+            "tau2_within": {
+              "r": 0.0185,
+              "app": 0.0,
+              "abs_diff": 0.0185,
+              "pass": true,
+              "tol": 0.08
+            },
+            "tau2_between": {
+              "r": 7.7876e-12,
+              "app": 0.005711777778396949,
+              "abs_diff": 0.005711777770609348,
+              "pass": true,
+              "tol": 0.08
+            }
+          },
+          "app": {
+            "ci_lower": -0.18532631370174152,
+            "ci_upper": 0.18232308104986555,
+            "converged": true,
+            "method": "Three-Level RE (WASM likelihood + CRVE)",
+            "se": 0.09378811090602221,
+            "tau2_between": 0.005711777778396949,
+            "tau2_total": 0.005711777778396949,
+            "tau2_within": 0,
+            "theta": -0.0015016163259379766
+          }
+        }
+      ]
+    },
+    {
+      "name": "ipd_binary_case_balanced",
+      "methods": [
+        {
+          "method": "one_stage_ipd_binary",
+          "status": "pass",
+          "comparison": {
+            "theta": {
+              "r": -0.3812,
+              "app": -0.38315320267610353,
+              "abs_diff": 0.0019532026761035493,
+              "pass": true,
+              "tol": 0.03
+            },
+            "se": {
+              "r": 0.1252,
+              "app": 0.12558763339777615,
+              "abs_diff": 0.0003876333977761437,
+              "pass": true,
+              "tol": 0.06
+            },
+            "ci_lower": {
+              "r": -0.6266,
+              "app": -0.6293049641357448,
+              "abs_diff": 0.002704964135744725,
+              "pass": true,
+              "tol": 0.12
+            },
+            "ci_upper": {
+              "r": -0.1358,
+              "app": -0.13700144121646235,
+              "abs_diff": 0.0012014412164623456,
+              "pass": true,
+              "tol": 0.12
+            },
+            "tau2": {
+              "r": 0.0,
+              "app": 1.5231490067863486e-08,
+              "abs_diff": 1.5231490067863486e-08,
+              "pass": true,
+              "tol": 0.12
+            }
+          },
+          "app": {
+            "ci_lower": -0.6293049641357448,
+            "ci_upper": -0.13700144121646235,
+            "method": "One-Stage IPD (binary GLMM)",
+            "se": 0.12558763339777615,
+            "tau2": 1.5231490067863486e-08,
+            "theta": -0.38315320267610353
+          }
+        }
+      ]
+    },
+    {
+      "name": "ipd_binary_case_sparse",
+      "methods": [
+        {
+          "method": "one_stage_ipd_binary",
+          "status": "pass",
+          "comparison": {
+            "theta": {
+              "r": -1.2147,
+              "app": -1.2203125101788475,
+              "abs_diff": 0.005612510178847563,
+              "pass": true,
+              "tol": 0.03
+            },
+            "se": {
+              "r": 0.5787,
+              "app": 0.5798470293447462,
+              "abs_diff": 0.0011470293447461977,
+              "pass": true,
+              "tol": 0.06
+            },
+            "ci_lower": {
+              "r": -2.349,
+              "app": -2.35681268769455,
+              "abs_diff": 0.00781268769454968,
+              "pass": true,
+              "tol": 0.12
+            },
+            "ci_upper": {
+              "r": -0.0804,
+              "app": -0.08381233266314503,
+              "abs_diff": 0.003412332663145029,
+              "pass": true,
+              "tol": 0.12
+            },
+            "tau2": {
+              "r": 0.0,
+              "app": 1.5231047740436754e-08,
+              "abs_diff": 1.5231047740436754e-08,
+              "pass": true,
+              "tol": 0.12
+            }
+          },
+          "app": {
+            "ci_lower": -2.35681268769455,
+            "ci_upper": -0.08381233266314503,
+            "method": "One-Stage IPD (binary GLMM)",
+            "se": 0.5798470293447462,
+            "tau2": 1.5231047740436754e-08,
+            "theta": -1.2203125101788475
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "total_checks": 4,
+    "passed_checks": 4,
+    "failed_checks": 0,
+    "skipped_checks": 0,
+    "overall_pass": true
+  }
+}

@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "C:\HTML apps\Truthcert1_work\S4_Validation_Test.py", line 291, in run_validation
+    hksj_checkbox = driver.find_element(By.ID, "useHKSJ")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 926, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="useHKSJ"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+

@@ -1,0 +1,26 @@
+{
+  "preset_id": "preset_02_continuous_efficacy",
+  "name": "Continuous Efficacy Workflow",
+  "intended_use": "MD/SMD-style efficacy synthesis",
+  "settings": {
+    "dataType": "continuous",
+    "effectMeasure": "SMD",
+    "tau2Method": "PM",
+    "hksj": true,
+    "continuityCorrection": 0.5
+  },
+  "advanced_actions": [
+    "runProfileLikelihoodAdvanced",
+    "runInfluenceDiagnostics"
+  ],
+  "required_exports": [
+    "exportTruthCertRunManifest",
+    "exportTruthCertMethodCitations",
+    "exportTruthCertAuditBundle"
+  ],
+  "acceptance_checks": [
+    "Prediction interval reported",
+    "Influence diagnostics reviewed",
+    "Audit bundle archived"
+  ]
+}

@@ -1,0 +1,63 @@
+# Disease Pack: Maternal & Child Health (MCH)
+disease_group:
+  code: "MCH"
+  name: "Maternal & Child Health"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: false
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "MCH-001"
+    title: "CHW home visits vs usual care"
+    population: "Pregnant women / newborns in rural districts"
+    intervention_a: "Structured CHW home-visits package"
+    comparator_b: "Usual care"
+    primary_outcome: "Neonatal mortality"
+    effect_measure: "log(RR)"
+    followup_window: "0–28 days"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "RR≤0.90 meaningful"
+    harms_watchlist: ["referral_delays"]
+    implementation_notes: "Referral pathways & transport plans required"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MCH-002"
+  - qid: "MCH-002"
+    title: "Immediate kangaroo mother care vs standard care"
+    population: "Stable LBW/preterm infants"
+    intervention_a: "Immediate KMC"
+    comparator_b: "Standard KMC / incubator as available"
+    primary_outcome: "Neonatal mortality"
+    effect_measure: "log(RR)"
+    followup_window: "0–28 days"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "RR≤0.90 meaningful"
+    harms_watchlist: ["hypothermia_if_poor_training"]
+    implementation_notes: "Training + space/privacy requirements"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MCH-001"
+  - qid: "MCH-003"
+    title: "Misoprostol vs oxytocin for PPH prevention"
+    population: "Women giving birth in low-resource settings"
+    intervention_a: "Misoprostol prophylaxis"
+    comparator_b: "Oxytocin prophylaxis"
+    primary_outcome: "Postpartum hemorrhage"
+    effect_measure: "log(RR)"
+    followup_window: "Delivery–24h"
+    mcid:
+      type: "RR"
+      value: 0.85
+      note: "RR≤0.85 meaningful"
+    harms_watchlist: ["fever"]
+    implementation_notes: "Cold chain constraints may favor misoprostol"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MCH-001"

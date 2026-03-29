@@ -1,0 +1,11 @@
+# Country-Disease Pack: ZAF x NTD
+country_iso3: "ZAF"
+disease_group_code: "NTD"
+question_priorities:
+  primary: ["NTD-001"]
+  secondary: ["NTD-002"]
+context_penalties:
+  sigma_context:
+    value: 1.2
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "Default Africa-mode delivery-heterogeneity penalty applied in decision layer only."

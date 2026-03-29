@@ -1,0 +1,52 @@
+name: TruthCert Nightly Quality Gate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * *"
+
+jobs:
+  nightly-quality-gate:
+    runs-on: windows-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install Firefox
+        uses: browser-actions/setup-firefox@v1
+
+      - name: Install geckodriver
+        shell: pwsh
+        run: choco install geckodriver --no-progress -y
+
+      - name: Install Python dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install selenium
+
+      - name: Run nightly quality gate
+        shell: pwsh
+        run: |
+          ./run_nightly_quality_gate.ps1 `
+            -ProjectRoot "${{ github.workspace }}" `
+            -OutputRoot "${{ github.workspace }}/nightly_runs_ci"
+
+      - name: Upload nightly artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-quality-gate-artifacts
+          path: |
+            nightly_runs_ci/**
+          if-no-files-found: error

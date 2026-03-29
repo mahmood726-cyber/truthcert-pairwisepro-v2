@@ -1,0 +1,63 @@
+# Disease Pack: Malaria (MAL)
+disease_group:
+  code: "MAL"
+  name: "Malaria"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: true
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "MAL-001"
+    title: "LLIN mass distribution vs no mass distribution"
+    population: "General population in endemic districts"
+    intervention_a: "Mass LLIN distribution"
+    comparator_b: "No mass LLIN campaign / routine only"
+    primary_outcome: "Clinical malaria incidence"
+    effect_measure: "log(RR)"
+    followup_window: "6–18 months"
+    mcid:
+      type: "RR"
+      value: 0.85
+      note: "RR≤0.85 incidence reduction meaningful"
+    harms_watchlist: ["insecticide_resistance", "misuse_of_nets"]
+    implementation_notes: "Include behavior-change; monitor resistance"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MAL-002"
+  - qid: "MAL-002"
+    title: "IRS vs no IRS (with background LLIN as applicable)"
+    population: "Households in endemic districts"
+    intervention_a: "Indoor residual spraying"
+    comparator_b: "No IRS"
+    primary_outcome: "Malaria incidence"
+    effect_measure: "log(RR)"
+    followup_window: "6–18 months"
+    mcid:
+      type: "RR"
+      value: 0.85
+      note: "RR≤0.85 meaningful"
+    harms_watchlist: ["spray_acceptability"]
+    implementation_notes: "Requires trained teams; logistics critical"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MAL-003"
+  - qid: "MAL-003"
+    title: "Seasonal malaria chemoprevention vs no SMC"
+    population: "Children 3–59 months in seasonal transmission areas"
+    intervention_a: "SMC (per guideline)"
+    comparator_b: "No SMC"
+    primary_outcome: "Clinical malaria episodes"
+    effect_measure: "log(RR)"
+    followup_window: "3–12 months"
+    mcid:
+      type: "RR"
+      value: 0.8
+      note: "RR≤0.80 meaningful"
+    harms_watchlist: ["drug_resistance"]
+    implementation_notes: "Community delivery + pharmacovigilance"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "MAL-001"

@@ -1,0 +1,9 @@
+legacy_sop_step,legacy_tool_action,truthcert_action,target_location,notes
+1,Load 2x2 safety dataset,Load CSV or paste into Data tab,panel-data,Supports legacy binary structure and zero-cell handling.
+2,Select random-effects method,Select matching tau2 estimator in dropdown,analysis controls,All legacy core estimators preserved and expanded.
+3,Run main pooling,Click Run Analysis,panel-analysis,No functionality removed.
+4,Rare-event sensitivity checks,Run GLMM family comparison (UM.FS/UM.RS/CM.EL/CM.AL),panel-advanced,Use parity table and plot.
+5,Publication bias checks,Use Bias tab (Egger/Begg/Peters/TrimFill/PET-PEESE),panel-bias,Parity maintained and expanded.
+6,Export report appendix,Export Manifest + Citations + Audit Bundle,panel-validation or methods modal,Supports reproducibility package.
+7,External oracle check,Export GLMM Metafor Cross-check R script,panel-advanced/panel-validation,Run externally via run_latest_glmm_metafor_crosscheck.bat.
+8,Release validation,Run prereg oracle + nightly gate,scripts in project root,Use run_preregistered_oracle_pack.bat and run_nightly_quality_gate.bat.

@@ -1,0 +1,32 @@
+pipeline {
+  agent any
+
+  options {
+    timestamps()
+    disableConcurrentBuilds()
+    timeout(time: 120, unit: 'MINUTES')
+  }
+
+  triggers {
+    cron('H 3 * * *')
+  }
+
+  stages {
+    stage('Nightly Quality Gate') {
+      steps {
+        powershell '''
+          $ErrorActionPreference = "Stop"
+          ./run_nightly_quality_gate.ps1 `
+            -ProjectRoot "C:/HTML apps/Truthcert1_work" `
+            -OutputRoot "C:/HTML apps/Truthcert1_work/nightly_runs_jenkins"
+        '''
+      }
+    }
+  }
+
+  post {
+    always {
+      archiveArtifacts artifacts: 'nightly_runs_jenkins/**', allowEmptyArchive: true
+    }
+  }
+}

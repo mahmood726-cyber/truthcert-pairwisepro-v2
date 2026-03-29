@@ -1,0 +1,55 @@
+﻿{
+    "generated_at":  "2026-02-26 22:19:13",
+    "project_root":  "C:/HTML apps/Truthcert1_work",
+    "run_dir":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626",
+    "overall_ok":  true,
+    "steps":  [
+                  {
+                      "name":  "oracle_preregistered_pack",
+                      "ok":  true,
+                      "started_at":  "2026-02-26 22:16:26",
+                      "ended_at":  "2026-02-26 22:16:31",
+                      "duration_seconds":  5.42,
+                      "error":  ""
+                  },
+                  {
+                      "name":  "glmm_metafor_crosscheck",
+                      "ok":  true,
+                      "started_at":  "2026-02-26 22:16:31",
+                      "ended_at":  "2026-02-26 22:16:34",
+                      "duration_seconds":  2.8,
+                      "error":  ""
+                  },
+                  {
+                      "name":  "firefox_test_v2",
+                      "ok":  true,
+                      "started_at":  "2026-02-26 22:16:34",
+                      "ended_at":  "2026-02-26 22:17:53",
+                      "duration_seconds":  78.88,
+                      "error":  ""
+                  },
+                  {
+                      "name":  "firefox_test_comprehensive",
+                      "ok":  true,
+                      "started_at":  "2026-02-26 22:17:53",
+                      "ended_at":  "2026-02-26 22:19:12",
+                      "duration_seconds":  79.78,
+                      "error":  ""
+                  },
+                  {
+                      "name":  "locked_repro_report",
+                      "ok":  true,
+                      "started_at":  "2026-02-26 22:19:12",
+                      "ended_at":  "2026-02-26 22:19:13",
+                      "duration_seconds":  0.18,
+                      "error":  ""
+                  }
+              ],
+    "artifacts":  {
+                      "oracle_output":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\oracle_output.json",
+                      "oracle_log":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\oracle_run.log",
+                      "glmm_log":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\glmm_crosscheck_run.log",
+                      "test_v2_log":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\test_v2.log",
+                      "test_comprehensive_log":  "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\test_comprehensive.log"
+                  }
+}

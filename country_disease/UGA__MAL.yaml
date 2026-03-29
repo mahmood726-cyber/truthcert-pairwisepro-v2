@@ -1,0 +1,11 @@
+# Country-Disease Pack: UGA x MAL
+country_iso3: "UGA"
+disease_group_code: "MAL"
+question_priorities:
+  primary: ["MAL-001","MAL-003"]
+  secondary: ["MAL-002"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

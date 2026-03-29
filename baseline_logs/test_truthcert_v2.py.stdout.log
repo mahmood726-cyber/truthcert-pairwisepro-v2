@@ -1,0 +1,88 @@
+============================================================
+TruthCert-PairwisePro Test Suite v2
+============================================================
+
+=== Test: Page Load and Initial Check ===
+  [PASS] Page loaded without JS errors
+
+=== Test: Data Type Selector ===
+  [PASS] Data type selector found with options: ['binary', 'continuous', 'hr', 'proportion', 'incidence', 'correlation', 'reliability', 'generic']
+  [PASS] Data type 'binary' selected
+  [PASS] Data type 'continuous' selected
+  [PASS] Data type 'hr' selected
+  [PASS] Data type 'proportion' selected
+  [PASS] Data type 'incidence' selected
+  [PASS] Data type 'correlation' selected
+  [PASS] Data type 'reliability' selected
+  [PASS] Data type 'generic' selected
+
+=== Test: Effect Size Selector ===
+  [PASS] Effect size selector found with 9 options
+  [PASS] Effect size 'OR' selected
+  [PASS] Effect size 'RR' selected
+  [PASS] Effect size 'RD' selected
+  [PASS] Effect size 'AS' selected
+  [PASS] Effect size 'PETO' selected
+
+=== Test: Tau2 Estimator Selector ===
+  [PASS] Tau2 selector found with 14 estimators: REML, DL, PM, ML, HS, SJ, HE, EB, GENQ, GENQM, DL2, CA, BMM, QG
+  [PASS] Tau2 estimator 'REML' selected
+  [PASS] Tau2 estimator 'DL' selected
+  [PASS] Tau2 estimator 'PM' selected
+  [PASS] Tau2 estimator 'ML' selected
+  [PASS] Tau2 estimator 'HS' selected
+  [PASS] Tau2 estimator 'SJ' selected
+  [PASS] Tau2 estimator 'HE' selected
+  [PASS] Tau2 estimator 'EB' selected
+  [PASS] Tau2 estimator 'GENQ' selected
+  [PASS] Tau2 estimator 'GENQM' selected
+  [PASS] Tau2 estimator 'DL2' selected
+  [PASS] Tau2 estimator 'CA' selected
+  [PASS] Tau2 estimator 'BMM' selected
+  [PASS] Tau2 estimator 'QG' selected
+
+=== Test: Load Demo Data ===
+  [PASS] Demo button clicked
+  [PASS] Data loaded: 5 study rows
+
+=== Test: Run Analysis ===
+  [PASS] Analysis ran without JS errors
+
+=== Test: Forest Plot ===
+  [FAIL] Forest plot - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="forest
+
+=== Test: Tab Navigation ===
+  [PASS] Found 14 tabs
+  [PASS] Tab 'data' clicked OK
+  [PASS] Tab 'analysis' clicked OK
+  [PASS] Tab 'ddma' clicked OK
+  [PASS] Tab 'heterogeneity' clicked OK
+  [PASS] Tab 'bias' clicked OK
+  [PASS] Tab 'clinical' clicked OK
+  [PASS] Tab 'multioutcome' clicked OK
+  [PASS] Tab 'demos' clicked OK
+  [PASS] Tab 'validation' clicked OK
+  [PASS] Tab 'crossdisciplinary' clicked OK
+  [PASS] Tab 'code' clicked OK
+  [PASS] Tab 'verdict' clicked OK
+  [PASS] Tab 'hta' clicked OK
+  [PASS] Tab 'report' clicked OK
+
+=== Test: Funnel Plot ===
+  [FAIL] Funnel plot - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="funnel
+
+=== Test: Different Data Types with Full Analysis ===
+
+--- Testing binary data type ---
+  [PASS] binary data analysis completed OK
+
+--- Testing continuous data type ---
+  [PASS] continuous data analysis completed OK
+
+--- Testing proportion data type ---
+  [PASS] proportion data analysis completed OK
+
+--- Testing correlation data type ---
+  [PASS] correlation data analysis completed OK
+
+--- Testing generic data type ---

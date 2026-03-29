@@ -1,0 +1,60 @@
+{
+  "generated": "2026-03-04 09:03:04 GMT",
+  "r_version": "4.5.2",
+  "metafor_version": "4.8.0",
+  "input_path": "C:\\HTML apps\\Truthcert1_work\\benchmark_pack\\oracle_input_advanced_v1.json",
+  "datasets": [
+    {
+      "name": "three_level_case_balanced",
+      "three_level": {
+        "theta": -0.1588,
+        "se": 0.0598,
+        "ci_lower": -0.276,
+        "ci_upper": -0.0416,
+        "tau2_within": 1.4058e-11,
+        "tau2_between": 0,
+        "tau2_total": 1.4058e-11,
+        "k": 12,
+        "n_clusters": 3,
+        "n_studies": 6
+      }
+    },
+    {
+      "name": "three_level_case_heterogeneous",
+      "three_level": {
+        "theta": -0.0089,
+        "se": 0.0965,
+        "ci_lower": -0.1979,
+        "ci_upper": 0.1802,
+        "tau2_within": 0.0185,
+        "tau2_between": 7.7876e-12,
+        "tau2_total": 0.0185,
+        "k": 12,
+        "n_clusters": 3,
+        "n_studies": 6
+      }
+    },
+    {
+      "name": "ipd_binary_case_balanced",
+      "one_stage_ipd_binary": {
+        "theta": -0.3812,
+        "se": 0.1252,
+        "ci_lower": -0.6266,
+        "ci_upper": -0.1358,
+        "tau2": 0,
+        "k": 6
+      }
+    },
+    {
+      "name": "ipd_binary_case_sparse",
+      "one_stage_ipd_binary": {
+        "theta": -1.2147,
+        "se": 0.5787,
+        "ci_lower": -2.349,
+        "ci_upper": -0.0804,
+        "tau2": 0,
+        "k": 6
+      }
+    }
+  ]
+}

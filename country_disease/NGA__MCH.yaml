@@ -1,0 +1,11 @@
+# Country-Disease Pack: NGA x MCH
+country_iso3: "NGA"
+disease_group_code: "MCH"
+question_priorities:
+  primary: ["MCH-001","MCH-002"]
+  secondary: ["MCH-003"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

@@ -1,0 +1,11 @@
+# Country-Disease Pack: TZA x HSP
+country_iso3: "TZA"
+disease_group_code: "HSP"
+question_priorities:
+  primary: ["HSP-002"]
+  secondary: ["HSP-001"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

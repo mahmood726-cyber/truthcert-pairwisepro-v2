@@ -1,0 +1,41 @@
+[
+  {
+    "model": "UM.FS",
+    "measure": "OR",
+    "k": 2,
+    "estimate_log": -0.1259,
+    "estimate_exp": 0.8817,
+    "se": 0.0675,
+    "ci_lb": 0.7724,
+    "ci_ub": 1.0064,
+    "tau2": 0
+  },
+  {
+    "model": "UM.RS",
+    "measure": "OR",
+    "k": 2,
+    "estimate_log": -0.1259,
+    "estimate_exp": 0.8817,
+    "se": 0.0675,
+    "ci_lb": 0.7724,
+    "ci_ub": 1.0064,
+    "tau2": 0
+  },
+  {
+    "model": "CM.EL",
+    "measure": "OR",
+    "k": 2,
+    "error": "Please install the 'BiasedUrn' package to fit this model."
+  },
+  {
+    "model": "CM.AL",
+    "measure": "OR",
+    "k": 2,
+    "estimate_log": -0.1161,
+    "estimate_exp": 0.8904,
+    "se": 0.0648,
+    "ci_lb": 0.7841,
+    "ci_ub": 1.011,
+    "tau2": 0
+  }
+]

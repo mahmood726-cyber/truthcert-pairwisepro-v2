@@ -1,0 +1,46 @@
+# Disease Pack: Cardiovascular (cardio-specific) (CVD)
+disease_group:
+  code: "CVD"
+  name: "Cardiovascular (cardio-specific)"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: false
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "CVD-001"
+    title: "Task-strengthening HTN management vs usual care"
+    population: "Adults with hypertension in primary care"
+    intervention_a: "Protocolized HTN care + task-shifting"
+    comparator_b: "Usual care"
+    primary_outcome: "Systolic BP (mmHg)"
+    effect_measure: "MD"
+    followup_window: "6–12 months"
+    mcid:
+      type: "MD"
+      value: 5.0
+      note: "≥5 mmHg SBP reduction meaningful"
+    harms_watchlist: ["hypotension"]
+    implementation_notes: "Medication supply stability; follow-up"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "CVD-002"
+  - qid: "CVD-002"
+    title: "Fixed-dose combination (polypill) vs usual care"
+    population: "Adults with high CV risk"
+    intervention_a: "Polypill strategy"
+    comparator_b: "Usual care"
+    primary_outcome: "Major CV events"
+    effect_measure: "log(RR)"
+    followup_window: "12–60 months"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "RR≤0.90 meaningful"
+    harms_watchlist: ["adverse_drug_reactions"]
+    implementation_notes: "Formulary and procurement"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "CVD-001"

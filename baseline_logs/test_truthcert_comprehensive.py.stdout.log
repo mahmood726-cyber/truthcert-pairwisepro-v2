@@ -1,0 +1,552 @@
+============================================================
+TruthCert-PairwisePro Comprehensive Test Suite
+============================================================
+
+=== Test 1: Page Load ===
+  [PASS] Page loaded Main header found
+  [PASS] No JavaScript errors on load 
+
+=== Test 2: Load Demo Data (binary) ===
+  [PASS] Demo data button clicked 
+  [PASS] Data loaded 5 study rows found
+
+=== Test 3: Data Type Selector ===
+  [FAIL] Data type selector - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 4: Effect Size Selector ===
+  [FAIL] Effect size selector - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="effectSize"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 5: Tau² Estimator Selector ===
+  [FAIL] Tau² estimator selector - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="tau2Estimator"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 6: Run Analysis ===
+  [PASS] Run analysis button clicked 
+  [FAIL] Run analysis - Alert Text: No multi-outcome data loaded. Import trials with outcomes first.
+Message: unexpected alert open: {Alert text : No multi-outcome data loaded. Import trials with outcomes first.}
+  (Session info: chrome=145.0.7632.77)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65c0161a8
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 7: Forest Plot ===
+  [WARN] Forest plot - Container not found
+
+=== Test 8: Funnel Plot ===
+  [WARN] Funnel plot - Container not found - may need tab switch
+
+=== Test 9: Tab Navigation ===
+  [PASS] Found 14 tabs 
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f4ca
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f4c8
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f3af
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f4c9
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f50d
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f48a
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f3af
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f4da
+  [WARN] Tab click - 'charmap' codec can't encode character '\u2713' in
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f52c
+  [WARN] Tab click - 'charmap' codec can't encode character '\U0001f4bb
+  [WARN] Tab click - 'charmap' codec can't encode characters in positio
+  [PASS] Tab 'hta' Clicked
+  [PASS] Tab 'report' Clicked
+
+=== Test 10: Publication Bias ===
+  [PASS] Egger's test Found in output
+  [PASS] Begg's test Found in output
+  [PASS] Trim-and-fill Found in output
+
+=== Test 11: HTA Module ===
+  [PASS] HTA tab Clicked
+  [PASS] CEAC section Found
+  [PASS] EVPI section Found
+
+=== Test 12: GRADE Assessment ===
+  [PASS] GRADE assessment Found in interface
+
+=== Test 13: Verdict System ===
+  [PASS] Verdict tab Clicked
+
+=== Test 14: Export Functions ===
+  [PASS] Export buttons found 7 buttons
+  [PASS] Export CSV Option available
+  [PASS] Export PDF Option available
+  [PASS] Export Word Option available
+  [PASS] Export Excel Option available
+  [PASS] Export R Option available
+  [PASS] Export JSON Option available
+
+=== Test 15: Sensitivity Analysis ===
+  [PASS] Sensitivity analysis Options found
+  [PASS] Baujat plot Option found
+
+=== Test 16: Subgroup Analysis ===
+  [PASS] Subgroup analysis Option found
+
+=== Test 17: Meta-Regression ===
+  [PASS] Meta-regression Option found
+
+=== Test 18: Validation Panel ===
+  [PASS] Validation tab Clicked
+  [PASS] Benchmark comparison Found
+
+=== Test 19: Button Safety Check ===
+  [PASS] Found 52 buttons 
+  [PASS] Enabled buttons 52 clickable
+
+=== Test 20: Continuous Data Analysis ===
+  [FAIL] Continuous data analysis - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 21: Proportion Data Analysis ===
+  [FAIL] Proportion data analysis - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 22: Correlation Data Analysis ===
+  [FAIL] Correlation data analysis - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 23: Generic Data Analysis ===
+  [FAIL] Generic data analysis - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Test 24: Full Binary Analysis ===
+  [FAIL] Full binary analysis - Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+=== Final JavaScript Error Check ===
+No JavaScript errors detected!
+
+============================================================
+TEST SUMMARY
+============================================================
+PASSED: 43
+FAILED: 9
+WARNINGS: 14
+
+--- FAILURES ---
+  - Data type selector: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Effect size selector: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="effectSize"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Tau² estimator selector: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="tau2Estimator"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Run analysis: Alert Text: No multi-outcome data loaded. Import trials with outcomes first.
+Message: unexpected alert open: {Alert text : No multi-outcome data loaded. Import trials with outcomes first.}
+  (Session info: chrome=145.0.7632.77)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65c0161a8
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Continuous data analysis: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Proportion data analysis: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Correlation data analysis: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Generic data analysis: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+  - Full binary analysis: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dataType"]"}
+  (Session info: chrome=145.0.7632.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65c1d4435
+	0x7ff65c1d4490
+	0x7ff65bf6d49d
+	0x7ff65bfc82fe
+	0x7ff65bfc860c
+	0x7ff65c018b67
+	0x7ff65c015728
+	0x7ff65bfb8e38
+	0x7ff65bfb9d23
+	0x7ff65c4a3b30
+	0x7ff65c49e3b8
+	0x7ff65c4be72a
+	0x7ff65c1f07e5
+	0x7ff65c1f978c
+	0x7ff65c1dd794
+	0x7ff65c1dd946
+	0x7ff65c1c3457
+	0x7ffb9a6ce8d7
+	0x7ffb9c78c40c
+
+
+--- WARNINGS ---
+  - Forest plot: Container not found
+  - Funnel plot: Container not found - may need tab switch
+  - Tab click: 'charmap' codec can't encode character '\U0001f4ca
+  - Tab click: 'charmap' codec can't encode character '\U0001f4c8
+  - Tab click: 'charmap' codec can't encode character '\U0001f3af
+  - Tab click: 'charmap' codec can't encode character '\U0001f4c9
+  - Tab click: 'charmap' codec can't encode character '\U0001f50d
+  - Tab click: 'charmap' codec can't encode character '\U0001f48a
+  - Tab click: 'charmap' codec can't encode character '\U0001f3af
+  - Tab click: 'charmap' codec can't encode character '\U0001f4da
+
+============================================================
+
+Press Enter to close browser...

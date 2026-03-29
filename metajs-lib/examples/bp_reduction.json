@@ -1,0 +1,52 @@
+{
+  "name": "Blood Pressure Reduction Trials",
+  "description": "Meta-analysis of blood pressure reduction from antihypertensive trials",
+  "measure": "MD",
+  "studies": [
+    {
+      "study": "Trial A 2018",
+      "mean_t": -12.5,
+      "sd_t": 8.2,
+      "n_t": 150,
+      "mean_c": -4.2,
+      "sd_c": 7.8,
+      "n_c": 148
+    },
+    {
+      "study": "Trial B 2019",
+      "mean_t": -10.8,
+      "sd_t": 9.1,
+      "n_t": 200,
+      "mean_c": -3.5,
+      "sd_c": 8.5,
+      "n_c": 205
+    },
+    {
+      "study": "Trial C 2020",
+      "mean_t": -14.2,
+      "sd_t": 7.5,
+      "n_t": 180,
+      "mean_c": -5.1,
+      "sd_c": 8.0,
+      "n_c": 175
+    },
+    {
+      "study": "Trial D 2021",
+      "mean_t": -11.3,
+      "sd_t": 8.8,
+      "n_t": 120,
+      "mean_c": -4.8,
+      "sd_c": 7.2,
+      "n_c": 118
+    },
+    {
+      "study": "Trial E 2022",
+      "mean_t": -9.5,
+      "sd_t": 10.2,
+      "n_t": 95,
+      "mean_c": -2.8,
+      "sd_c": 9.8,
+      "n_c": 100
+    }
+  ]
+}

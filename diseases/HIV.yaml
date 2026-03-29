@@ -1,0 +1,63 @@
+# Disease Pack: HIV/AIDS (HIV)
+disease_group:
+  code: "HIV"
+  name: "HIV/AIDS"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: false
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "HIV-001"
+    title: "Community-based ART delivery vs facility-based ART delivery"
+    population: "Adults living with HIV on ART (stable)"
+    intervention_a: "Community ART groups / home delivery / community refills"
+    comparator_b: "Standard facility-based refills"
+    primary_outcome: "Viral suppression at 12 months"
+    effect_measure: "log(RR)"
+    followup_window: "9–15 months"
+    mcid:
+      type: "RR"
+      value: 0.9
+      note: "Non-inferiority style: RR of suppression ≥0.90 acceptable"
+    harms_watchlist: ["loss_to_followup", "drug_stockouts"]
+    implementation_notes: "Requires CHW/community group system; monitor stockouts"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "HIV-002"
+  - qid: "HIV-002"
+    title: "SMS adherence support vs usual care"
+    population: "Adults on ART"
+    intervention_a: "SMS reminders / two-way SMS support"
+    comparator_b: "Usual care"
+    primary_outcome: "Retention in care at 12 months"
+    effect_measure: "log(RR)"
+    followup_window: "9–15 months"
+    mcid:
+      type: "RR"
+      value: 1.05
+      note: "RR≥1.05 retention considered meaningful"
+    harms_watchlist: ["privacy_risk"]
+    implementation_notes: "Phone access + confidentiality safeguards"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "HIV-003"
+  - qid: "HIV-003"
+    title: "Same-day ART initiation vs delayed initiation"
+    population: "Newly diagnosed adults"
+    intervention_a: "Same-day initiation"
+    comparator_b: "Standard initiation pathway"
+    primary_outcome: "Retention at 6–12 months"
+    effect_measure: "log(RR)"
+    followup_window: "6–15 months"
+    mcid:
+      type: "RR"
+      value: 1.05
+      note: "RR≥1.05 retention meaningful"
+    harms_watchlist: ["adverse_events"]
+    implementation_notes: "Clinical screening for OIs; training"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "HIV-001"

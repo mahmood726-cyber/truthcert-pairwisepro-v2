@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\HTML apps\Truthcert1_work\test_truthcert_comprehensive.py", line 726, in <module>
+    main()
+    ~~~~^^
+  File "C:\HTML apps\Truthcert1_work\test_truthcert_comprehensive.py", line 722, in main
+    input("\nPress Enter to close browser...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line

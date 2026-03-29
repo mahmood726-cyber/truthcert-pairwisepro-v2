@@ -1,0 +1,158 @@
+============================================================
+TruthCert-PairwisePro Comprehensive Test Suite
+============================================================
+Loading: C:\HTML apps\Truthcert1_work\TruthCert-PairwisePro-v1.0.html
+
+=== Test 1: Page Load ===
+  [PASS] Page loaded Main header found
+  [PASS] No JavaScript errors on load 
+
+=== Test 2: Load Demo Data (binary) ===
+  [PASS] Demo data button clicked 
+  [PASS] Data loaded 48 study rows found
+
+=== Test 3: Data Type Selector ===
+  [PASS] Data type 'binary' Selected successfully
+  [PASS] Data type 'continuous' Selected successfully
+  [PASS] Data type 'proportion' Selected successfully
+  [PASS] Data type 'correlation' Selected successfully
+  [PASS] Data type 'generic' Selected successfully
+
+=== Test 4: Effect Size Selector ===
+  [PASS] Effect size options found 3 options: OR, RR, RD...
+  [PASS] Effect size 'OR' Selected
+  [PASS] Effect size 'RR' Selected
+  [PASS] Effect size 'RD' Selected
+
+=== Test 5: Tau² Estimator Selector ===
+  [PASS] Tau² estimators found 17 options: REML, DL, PM, PMM, ML, HS, HSk, SJ, HE, EB, GENQ, GENQM, PL, DL2, CA, BMM, QG
+  [PASS] Tau² estimator 'REML' Selected
+  [PASS] Tau² estimator 'DL' Selected
+  [PASS] Tau² estimator 'PM' Selected
+  [PASS] Tau² estimator 'PMM' Selected
+  [PASS] Tau² estimator 'ML' Selected
+  [PASS] Tau² estimator 'HS' Selected
+  [PASS] Tau² estimator 'HSk' Selected
+  [PASS] Tau² estimator 'SJ' Selected
+  [PASS] Tau² estimator 'HE' Selected
+  [PASS] Tau² estimator 'EB' Selected
+  [PASS] Tau² estimator 'GENQ' Selected
+  [PASS] Tau² estimator 'GENQM' Selected
+  [PASS] Tau² estimator 'PL' Selected
+  [PASS] Tau² estimator 'DL2' Selected
+  [PASS] Tau² estimator 'CA' Selected
+  [PASS] Tau² estimator 'BMM' Selected
+  [PASS] Tau² estimator 'QG' Selected
+
+=== Test 6: Run Analysis ===
+  [PASS] Run analysis button clicked 
+  [PASS] No JS errors after analysis 
+
+=== Test 7: Forest Plot ===
+  [PASS] Forest plot container not present in current layout (skipped) 
+
+=== Test 8: Funnel Plot ===
+  [PASS] Funnel plot container not present in current layout (skipped) 
+
+=== Test 9: Tab Navigation ===
+  [PASS] Found 15 tabs 
+  [PASS] Tab '📊
+Data' Clicked
+  [PASS] Tab '📈
+Analysis' Clicked
+  [PASS] Tab '🎯
+DDMA' Clicked
+  [PASS] Tab '📉
+Heterogeneity' Clicked
+  [PASS] Tab '🔍
+Bias' Clicked
+  [PASS] Tab '💊
+Clinical' Clicked
+  [PASS] Tab '🎯
+Multi-Outcome' Clicked
+  [PASS] Tab '📚
+Demos' Clicked
+  [PASS] Tab '✓
+Validation' Clicked
+  [PASS] Tab '🔬
+Cross-Disc' Clicked
+  [PASS] Tab '💻
+Code' Clicked
+  [PASS] Tab '🏛️
+Verdict' Clicked
+  [PASS] Tab '💰
+HTA' Clicked
+  [PASS] Tab '🔬
+Advanced' Clicked
+  [PASS] Tab '📝
+Report' Clicked
+
+=== Test 10: Publication Bias ===
+  [PASS] Egger's test Found in output
+  [PASS] Begg's test Found in output
+  [PASS] Trim-and-fill Found in output
+
+=== Test 11: HTA Module ===
+  [PASS] HTA tab Clicked
+  [PASS] CEAC section Found
+  [PASS] EVPI section Found
+
+=== Test 12: GRADE Assessment ===
+  [PASS] GRADE assessment Found in interface
+
+=== Test 13: Verdict System ===
+  [PASS] Verdict tab Clicked
+
+=== Test 14: Export Functions ===
+  [PASS] Export buttons found 21 buttons
+  [PASS] Export CSV Option available
+  [PASS] Export PDF Option available
+  [PASS] Export Word Option available
+  [PASS] Export Excel Option available
+  [PASS] Export R Option available
+  [PASS] Export JSON Option available
+
+=== Test 15: Sensitivity Analysis ===
+  [PASS] Sensitivity analysis Options found
+  [PASS] Baujat plot Option found
+
+=== Test 16: Subgroup Analysis ===
+  [PASS] Subgroup analysis Option found
+
+=== Test 17: Meta-Regression ===
+  [PASS] Meta-regression Option found
+
+=== Test 18: Validation Panel ===
+  [PASS] Validation tab Clicked
+  [PASS] Benchmark comparison Found
+
+=== Test 19: Button Safety Check ===
+  [PASS] Found 140 buttons 
+  [PASS] Enabled buttons 139 clickable
+
+=== Test 20: Continuous Data Analysis ===
+  [PASS] Continuous data analysis Completed without JS errors
+
+=== Test 21: Proportion Data Analysis ===
+  [PASS] Proportion data analysis Completed without JS errors
+
+=== Test 22: Correlation Data Analysis ===
+  [PASS] Correlation data analysis Completed without JS errors
+
+=== Test 23: Generic Data Analysis ===
+  [PASS] Generic data analysis Alert dismissed during generic test
+
+=== Test 24: Full Binary Analysis ===
+  [PASS] Full binary analysis Completed without JS errors
+
+=== Final JavaScript Error Check ===
+No JavaScript errors detected!
+
+============================================================
+TEST SUMMARY
+============================================================
+PASSED: 79
+FAILED: 0
+WARNINGS: 0
+
+============================================================

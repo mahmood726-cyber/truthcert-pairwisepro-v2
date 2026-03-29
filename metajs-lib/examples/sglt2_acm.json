@@ -1,0 +1,42 @@
+{
+  "name": "SGLT2 Inhibitors - All-Cause Mortality",
+  "description": "Meta-analysis of SGLT2 inhibitor trials for all-cause mortality",
+  "measure": "OR",
+  "studies": [
+    {
+      "study": "DAPA-HF 2019",
+      "events_t": 276,
+      "n_t": 2373,
+      "events_c": 329,
+      "n_c": 2371
+    },
+    {
+      "study": "EMPEROR-Reduced 2020",
+      "events_t": 249,
+      "n_t": 1863,
+      "events_c": 266,
+      "n_c": 1867
+    },
+    {
+      "study": "DELIVER 2022",
+      "events_t": 497,
+      "n_t": 3131,
+      "events_c": 526,
+      "n_c": 3132
+    },
+    {
+      "study": "EMPEROR-Preserved 2021",
+      "events_t": 422,
+      "n_t": 2997,
+      "events_c": 463,
+      "n_c": 2991
+    },
+    {
+      "study": "SOLOIST-WHF 2021",
+      "events_t": 51,
+      "n_t": 608,
+      "events_c": 58,
+      "n_c": 614
+    }
+  ]
+}

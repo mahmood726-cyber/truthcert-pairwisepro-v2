@@ -1,0 +1,11 @@
+# Country-Disease Pack: BFA x HIV
+country_iso3: "BFA"
+disease_group_code: "HIV"
+question_priorities:
+  primary: ["HIV-001","HIV-002"]
+  secondary: ["HIV-003"]
+context_penalties:
+  sigma_context:
+    value: 1.0
+    applies_to: ["transportability","prediction_interval_summary","hta_psa"]
+    note: "No default penalty."

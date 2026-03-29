@@ -1,0 +1,94 @@
+{
+  "pack_id": "truthcert_pairwise_benchmark_pack_v1",
+  "locked_at": "2026-02-26",
+  "protocol": "governance/PREREGISTERED_ORACLE_PROTOCOL_V1_2026-02-26.md",
+  "input_file": "benchmark_pack/oracle_input_preregistered_v1.json",
+  "datasets": [
+    {
+      "id": "bcg_builtin",
+      "source": "metadat::dat.bcg",
+      "class": "binary",
+      "edge_case": "canonical"
+    },
+    {
+      "id": "binary_lowhet_rr",
+      "source": "custom",
+      "class": "binary",
+      "edge_case": "low_heterogeneity"
+    },
+    {
+      "id": "binary_sparse_zero_or",
+      "source": "custom",
+      "class": "binary",
+      "edge_case": "sparse_zero_cells"
+    },
+    {
+      "id": "binary_highhet_rr",
+      "source": "custom",
+      "class": "binary",
+      "edge_case": "high_heterogeneity"
+    },
+    {
+      "id": "continuous_md_case",
+      "source": "custom",
+      "class": "continuous_like",
+      "edge_case": "standard"
+    },
+    {
+      "id": "continuous_smd_case",
+      "source": "custom",
+      "class": "continuous_like",
+      "edge_case": "moderate_heterogeneity"
+    },
+    {
+      "id": "proportion_like_case",
+      "source": "custom",
+      "class": "proportion_like",
+      "edge_case": "bounded_outcomes"
+    },
+    {
+      "id": "correlation_like_case",
+      "source": "custom",
+      "class": "correlation_like",
+      "edge_case": "small_variance"
+    },
+    {
+      "id": "generic_outlier_case",
+      "source": "custom",
+      "class": "generic",
+      "edge_case": "influential_outlier"
+    },
+    {
+      "id": "small_k_edge_case",
+      "source": "custom",
+      "class": "generic",
+      "edge_case": "small_k"
+    }
+  ],
+  "required_estimators": [
+    "DL",
+    "REML",
+    "ML",
+    "PM",
+    "PMM",
+    "HS",
+    "HSk",
+    "SJ",
+    "HE",
+    "EB",
+    "GENQ",
+    "GENQM"
+  ],
+  "required_glmm_families": [
+    "UM.FS",
+    "UM.RS",
+    "CM.EL",
+    "CM.AL"
+  ],
+  "tolerance_profile": {
+    "theta_se_relative": 1e-5,
+    "heterogeneity_relative": 1e-4,
+    "pvalue_absolute": 1e-4,
+    "glmm_relative": 1e-4
+  }
+}

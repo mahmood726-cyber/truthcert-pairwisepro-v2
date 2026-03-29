@@ -1,0 +1,46 @@
+# Disease Pack: Neglected Tropical Diseases (NTD)
+disease_group:
+  code: "NTD"
+  name: "Neglected Tropical Diseases"
+core_model_templates:
+  default_time_horizon_years: 10
+  allow_transmission_model: false
+  allow_onehealth_externalities: true
+  outcome_metrics:
+    primary: ["DALY","QALY_optional","cases_averted","deaths_averted"]
+    secondary: ["catastrophic_costs_optional","out_of_pocket_optional","equity_metrics"]
+question_bank:
+  - qid: "NTD-001"
+    title: "MDA vs targeted treatment (schistosomiasis)"
+    population: "School-age children in endemic communities"
+    intervention_a: "MDA praziquantel"
+    comparator_b: "Targeted / standard school treatment"
+    primary_outcome: "Infection prevalence"
+    effect_measure: "log(RR)"
+    followup_window: "6–24 months"
+    mcid:
+      type: "RR"
+      value: 0.8
+      note: "RR≤0.80 meaningful"
+    harms_watchlist: ["adverse_events"]
+    implementation_notes: "Delivery via schools; AE readiness"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "NTD-002"
+  - qid: "NTD-002"
+    title: "Annual vs biannual azithromycin MDA (trachoma)"
+    population: "Communities in endemic regions"
+    intervention_a: "Biannual MDA"
+    comparator_b: "Annual MDA"
+    primary_outcome: "Trachoma prevalence"
+    effect_measure: "log(RR)"
+    followup_window: "12–36 months"
+    mcid:
+      type: "RR"
+      value: 0.85
+      note: "RR≤0.85 meaningful"
+    harms_watchlist: ["AMR_externality"]
+    implementation_notes: "OneHealth/AMR ledger must run"
+    feasibility_gate:
+      min_k_target: 4
+      pivot_if_k_lt_2: "NTD-001"

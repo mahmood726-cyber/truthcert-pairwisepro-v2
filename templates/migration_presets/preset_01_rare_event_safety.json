@@ -1,0 +1,26 @@
+{
+  "preset_id": "preset_01_rare_event_safety",
+  "name": "Rare Event Safety Workflow",
+  "intended_use": "Binary sparse events and safety endpoints",
+  "settings": {
+    "dataType": "binary",
+    "effectMeasure": "OR",
+    "tau2Method": "REML",
+    "hksj": true,
+    "continuityCorrection": 0.5
+  },
+  "advanced_actions": [
+    "runGLMMAdvanced",
+    "runProfileLikelihoodAdvanced"
+  ],
+  "required_exports": [
+    "exportTruthCertRunManifest",
+    "exportTruthCertAuditBundle",
+    "exportTruthCertGLMMMetaforCrosscheckScript"
+  ],
+  "acceptance_checks": [
+    "All GLMM families return finite estimates",
+    "No JS errors in run",
+    "Cross-check R script exported"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-02-26 22:19:13",
+  "project_root": "C:\\HTML apps\\Truthcert1_work",
+  "run_dir": "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626",
+  "gate": {
+    "all_pass": true,
+    "conditions": {
+      "test_v2_failed_zero": true,
+      "test_comprehensive_failed_zero": true,
+      "oracle_output_present": true,
+      "glmm_crosscheck_artifact_present": true
+    }
+  },
+  "test_summaries": {
+    "v2": {
+      "passed": 64,
+      "failed": 0,
+      "warnings": null
+    },
+    "comprehensive": {
+      "passed": 79,
+      "failed": 0,
+      "warnings": 0
+    }
+  },
+  "oracle": {
+    "path": "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\oracle_output.json",
+    "dataset_count": 10,
+    "dataset_names": [
+      "bcg_builtin",
+      "binary_lowhet_rr",
+      "binary_sparse_zero_or",
+      "binary_highhet_rr",
+      "continuous_md_case",
+      "continuous_smd_case",
+      "proportion_like_case",
+      "correlation_like_case",
+      "generic_outlier_case",
+      "small_k_edge_case"
+    ],
+    "datasets_with_glmm": [
+      "bcg_builtin",
+      "binary_lowhet_rr",
+      "binary_sparse_zero_or",
+      "binary_highhet_rr",
+      "small_k_edge_case"
+    ]
+  },
+  "glmm_crosscheck": {
+    "log_path": "C:\\HTML apps\\Truthcert1_work\\nightly_runs_test5\\run_20260226_221626\\glmm_crosscheck_run.log",
+    "crosscheck_csv": [
+      "truthcert_glmm_metafor_crosscheck_20260226_221634.csv"
+    ],
+    "comparison_csv": [
+      "truthcert_glmm_metafor_comparison_20260226_221634.csv"
+    ],
+    "oracle_glmm_dataset_count": 5,
+    "oracle_glmm_dataset_names": [
+      "bcg_builtin",
+      "binary_lowhet_rr",
+      "binary_sparse_zero_or",
+      "binary_highhet_rr",
+      "small_k_edge_case"
+    ]
+  },
+  "file_hashes": [
+    {
+      "file": "TruthCert-PairwisePro-v1.0.html",
+      "sha256": "1cc982b2f224dbb48fe1839eca9ef0a974232db775ce781c9516673d558321d6"
+    },
+    {
+      "file": "app.js",
+      "sha256": "1ab7b5ace6c660b82a216733d6c2f2485859ddf323c14a02abc24070f2b09d36"
+    },
+    {
+      "file": "expert_upgrade_additions.js",
+      "sha256": "26923fce671dff5b06c0e481e85c4070321d87e7fcc92ae7d311897769b65c5c"
+    },
+    {
+      "file": "run_oracle_benchmark.ps1",
+      "sha256": "fcc71765d5a4a382490b370ab2505c3efda2e276e1ad7caaf54d52697e37ffb9"
+    },
+    {
+      "file": "R_oracle_pairwise_benchmark.R",
+      "sha256": "b28e04a8bc12d714c25f9a7aaab8ad220149c5c98faa828e191a51f7a7d2bd23"
+    },
+    {
+      "file": "run_latest_glmm_metafor_crosscheck.ps1",
+      "sha256": "3d5c9bb6da10c255771985d039a8c35943c5c6f7030f8e1cbca3c1f489d82099"
+    },
+    {
+      "file": "run_nightly_quality_gate.ps1",
+      "sha256": "6dc519fb2d8509e372b82d194311b8ab52b0a3299a6d82517c90c917debb724f"
+    }
+  ]
+}

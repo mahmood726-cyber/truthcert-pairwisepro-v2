@@ -1,5 +1,7 @@
 # Claude Code Instructions for TruthCert-PairwisePro
 
+<!-- sentinel:skip-file — this doc narrates historical development and references legacy script paths as part of its audit trail, not as executable configuration. -->
+
 ## Project Context
 
 This is the **TruthCert-PairwisePro v1.0** meta-analysis application - a single-page web app for systematic review and health technology assessment.

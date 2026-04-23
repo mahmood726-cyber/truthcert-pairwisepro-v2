@@ -1,3 +1,4 @@
+// sentinel:skip-file — this is a partial extracted code fragment, not a complete module. File starts mid-function (showToast body) with no matching declaration. Kept as a development scratch reference. Flagged for cleanup: either complete the extract or remove from tracking.
 (function() {
       toast.className = 'toast-notification toast-' + type;
       toast.style.cssText = 'position:fixed;bottom:20px;right:20px;padding:12px 20px;border-radius:8px;color:white;font-weight:500;z-index:10000;max-width:400px;box-shadow:0 4px 12px rgba(0,0,0,0.3);animation:toastIn 0.3s ease;';

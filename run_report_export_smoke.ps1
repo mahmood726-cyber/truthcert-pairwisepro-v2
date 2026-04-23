@@ -7,16 +7,19 @@ param(
 $ErrorActionPreference = "Stop"
 
 function Resolve-PythonExe {
+  if ($env:PYTHON_EXE -and (Test-Path -LiteralPath $env:PYTHON_EXE)) { return $env:PYTHON_EXE }
+  $cmd = Get-Command python.exe -ErrorAction SilentlyContinue
+  if ($cmd) { return $cmd.Path }
+  $envRoot = if ($env:LOCALAPPDATA) { $env:LOCALAPPDATA } else { "$env:USERPROFILE\AppData\Local" }
   $candidates = @(
-    "C:/Users/user/AppData/Local/Programs/Python/Python313/python.exe",
-    "C:/Users/user/AppData/Local/Programs/Python/Python312/python.exe"
+    "$envRoot\Programs\Python\Python313\python.exe",
+    "$envRoot\Programs\Python\Python312\python.exe",
+    "$envRoot\Programs\Python\Python311\python.exe"
   )
   foreach ($c in $candidates) {
     if (Test-Path -LiteralPath $c) { return $c }
   }
-  $cmd = Get-Command python -ErrorAction SilentlyContinue
-  if ($cmd) { return $cmd.Source }
-  throw "Python executable not found. Update Resolve-PythonExe candidates."
+  throw "Python executable not found. Set `$env:PYTHON_EXE or put python.exe on PATH."
 }
 
 if (-not (Test-Path -LiteralPath $SmokeScript)) {

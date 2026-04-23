@@ -1260,8 +1260,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const rows = studies.map(s => 
           `"${s.name.replace(/"/g, '""')}",${s.events_t},${s.n_t},${s.events_c},${s.n_c}`
         );
-        const csv = [header, ...rows].join('
-');
+        const csv = [header, ...rows].join('\n');
 
         // Download CSV
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });

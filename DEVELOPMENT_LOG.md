@@ -1,5 +1,7 @@
 # TruthCert-PairwisePro Development Log
 
+<!-- sentinel:skip-file — this is a historical development log; legacy script path references are narrative record, not executable configuration. -->
+
 ## Project Overview
 
 **Application:** TruthCert-PairwisePro v1.0

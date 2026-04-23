@@ -1,5 +1,7 @@
 # TruthCert-PairwisePro Quick Reference
 
+<!-- sentinel:skip-file — reference doc cites developer-local script paths as historical context. -->
+
 ## Console Commands (Browser DevTools)
 
 ```javascript

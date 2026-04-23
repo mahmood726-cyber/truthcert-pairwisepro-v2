@@ -38,3 +38,9 @@ Thumbs.db
 *.backup-pre-release
 *.html.backup-pre-*
 *.js.backup-pre-*
+
+# Recovery snapshots (point-in-time directory copies, reconstructable from git)
+recovery_snapshot_*/
+
+# Versioned HTML snapshots (old intermediate versions)
+TruthCert_v*-*_FIXED*.html

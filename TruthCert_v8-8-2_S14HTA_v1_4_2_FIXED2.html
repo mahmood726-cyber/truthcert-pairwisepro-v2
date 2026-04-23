@@ -322,7 +322,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
             <!-- Forest Plot Controls -->
             <div class="forest-options" style="display:flex;flex-wrap:wrap;gap:16px;padding:16px;background:var(--bg-elevated);border-radius:8px;margin-bottom:16px;align-items:flex-end;">
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">Theme</label>
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-theme">Theme</label>
                     <select id="forest-theme" onchange="renderForestPlot()" style="padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
                         <option value="spss">SPSS Classic</option>
                         <option value="teal">Dark Teal</option>
@@ -332,7 +332,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                     </select>
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">Style</label>
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-style">Style</label>
                     <select id="forest-style" onchange="renderForestPlot()" style="padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
                         <option value="standard">Standard</option>
                         <option value="compact">Compact</option>
@@ -341,15 +341,15 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                     </select>
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">X-Axis Min</label>
-                    <input type="number" id="forest-xmin" step="any" placeholder="Auto" onchange="renderForestPlot()" style="width:80px;padding:8px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-xmin">X-Axis Min</label>
+                    <input type="number" id="forest-xmin" step="any" aria-label="Auto" placeholder="Auto" onchange="renderForestPlot()" style="width:80px;padding:8px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">X-Axis Max</label>
-                    <input type="number" id="forest-xmax" step="any" placeholder="Auto" onchange="renderForestPlot()" style="width:80px;padding:8px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-xmax">X-Axis Max</label>
+                    <input type="number" id="forest-xmax" step="any" aria-label="Auto" placeholder="Auto" onchange="renderForestPlot()" style="width:80px;padding:8px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">Sort By</label>
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-sort">Sort By</label>
                     <select id="forest-sort" onchange="renderForestPlot()" style="padding:8px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.85rem;">
                         <option value="input">Input Order</option>
                         <option value="effect">Effect Size</option>
@@ -388,11 +388,11 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                     <label for="forest-show-pi" style="font-size:0.8rem;color:var(--text-dim);">Prediction Interval</label>
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">Favors Left</label>
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-favors-left">Favors Left</label>
                     <input type="text" id="forest-favors-left" value="Control" onchange="renderForestPlot()" style="width:80px;padding:6px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
                 </div>
                 <div class="forest-opt-group">
-                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;">Favors Right</label>
+                    <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:4px;" for="forest-favors-right">Favors Right</label>
                     <input type="text" id="forest-favors-right" value="Treatment" onchange="renderForestPlot()" style="width:80px;padding:6px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;">
                 </div>
                 <div class="forest-opt-group" style="margin-left:auto;">
@@ -438,7 +438,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                 <h3 style="color:var(--purple);margin-bottom:16px;font-size:1.1rem;">Meta-Regression Analysis</h3>
                 <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin-bottom:16px;">
                     <div class="form-group" style="min-width:150px;">
-                        <label style="font-size:0.8rem;color:var(--text-muted);">Moderator Variable</label>
+                        <label style="font-size:0.8rem;color:var(--text-muted);" for="metareg-moderator">Moderator Variable</label>
                         <select id="metareg-moderator" onchange="runMetaRegression()" style="padding:10px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);">
                             <option value="year">Year</option>
                             <option value="mod1">Moderator 1 (Mod1)</option>
@@ -447,7 +447,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                         </select>
                     </div>
                     <div class="form-group" style="min-width:150px;">
-                        <label style="font-size:0.8rem;color:var(--text-muted);">Method</label>
+                        <label style="font-size:0.8rem;color:var(--text-muted);" for="metareg-method">Method</label>
                         <select id="metareg-method" onchange="runMetaRegression()" style="padding:10px;background:var(--bg-input);border:1px solid var(--border);border-radius:6px;color:var(--text);">
                             <option value="ml">Maximum Likelihood (ML)</option>
                             <option value="reml" selected>Restricted ML (REML)</option>
@@ -565,7 +565,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                     <legend style="color:var(--green);">🌍 Country Pack</legend>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Country</label>
+                            <label for="hta-country">Country</label>
                             <select id="hta-country" onchange="onCountryChange()">
                                 <optgroup label="── Reference Countries ──">
                                     <option value="GBR">United Kingdom (GBP)</option>
@@ -643,7 +643,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Disease Pack</label>
+                            <label for="hta-disease-pack">Disease Pack</label>
                             <select id="hta-disease-pack" onchange="onDiseasePackChange()">
                                 <option value="none">-- Select Disease --</option>
                                 <option value="malaria">🦟 Malaria</option>
@@ -669,8 +669,8 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                 <fieldset style="margin-bottom:16px;">
                     <legend style="color:var(--cyan);">💊 Intervention Pack</legend>
                     <div class="form-grid">
-                        <div class="form-group"><label>Intervention Name</label><input type="text" id="hta-interv-name" placeholder="e.g., SGLT2 inhibitor" class="cell-input"></div>
-                        <div class="form-group"><label>Comparator Name</label><input type="text" id="hta-comp-name" placeholder="e.g., Standard care" class="cell-input" value="Standard care"></div>
+                        <div class="form-group"><label>Intervention Name</label><input type="text" id="hta-interv-name" aria-label="e.g., SGLT2 inhibitor" placeholder="e.g., SGLT2 inhibitor" class="cell-input"></div>
+                        <div class="form-group"><label>Comparator Name</label><input type="text" id="hta-comp-name" aria-label="e.g., Standard care" placeholder="e.g., Standard care" class="cell-input" value="Standard care"></div>
                         <div class="form-group"><label>Intervention Cost (LCU/year)</label><input type="number" id="hta-cost-interv" value="1200" class="cell-input"></div>
                         <div class="form-group"><label>Comparator Cost (LCU/year)</label><input type="number" id="hta-cost-comp" value="0" class="cell-input"></div>
                         <div class="form-group"><label>Time Horizon (years)</label><input type="number" id="hta-horizon" value="10" min="1" max="100" class="cell-input"></div>
@@ -683,7 +683,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                         <div class="form-group"><label>Baseline Event Risk (annual)</label><input type="number" id="hta-baseline-risk" value="0.05" step="0.01" min="0" max="1" class="cell-input"></div>
                         <div class="form-group"><label>QALY Loss per Event</label><input type="number" id="hta-qaly-loss" value="0.15" step="0.01" class="cell-input"></div>
                         <div class="form-group"><label>Cost per Event (LCU)</label><input type="number" id="hta-cost-event" value="15000" class="cell-input"></div>
-                        <div class="form-group"><label>Outcome Measure</label>
+                        <div class="form-group"><label for="hta-outcome-type">Outcome Measure</label>
                             <select id="hta-outcome-type">
                                 <option value="events_prevented">Events Prevented</option>
                                 <option value="qaly">QALYs Gained</option>
@@ -713,7 +713,7 @@ fieldset{border:1px solid var(--border);border-radius:var(--radius-sm);padding:2
                         <div class="form-group"><label>Health Budget (LCU)</label><input type="number" id="hta-bia-total-budget" value="50000000" class="cell-input"></div>
                     </div>
                     <div class="form-grid" style="margin-top:8px;">
-                        <div class="form-group"><label>Scenario Analysis</label>
+                        <div class="form-group"><label for="hta-bia-scenario">Scenario Analysis</label>
                             <select id="hta-bia-scenario">
                                 <option value="base">Base Case</option>
                                 <option value="best">Best Case (High Uptake, Low Cost)</option>
@@ -1813,9 +1813,9 @@ function renderDataTable() {
         <td><input class="cell-input" type="number" value="${s.year || ''}" onchange="updateStudy(${i},'year',this.value)"></td>
         <td><input class="cell-input" type="number" step="any" value="${s.effect ?? ''}" onchange="updateStudy(${i},'effect',this.value)"></td>
         <td><input class="cell-input" type="number" step="any" value="${s.se ?? ''}" onchange="updateStudy(${i},'se',this.value)"></td>
-        <td><input class="cell-input" value="${s.subgroup || ''}" onchange="updateStudy(${i},'subgroup',this.value)" placeholder="Group"></td>
-        <td><input class="cell-input" type="number" step="any" value="${s.mod1 ?? ''}" onchange="updateStudy(${i},'mod1',this.value)" placeholder="Covariate"></td>
-        <td><input class="cell-input" type="number" step="any" value="${s.mod2 ?? ''}" onchange="updateStudy(${i},'mod2',this.value)" placeholder="Covariate"></td>
+        <td><input class="cell-input" value="${s.subgroup || ''}" onchange="updateStudy(${i},'subgroup',this.value)" aria-label="Group" placeholder="Group"></td>
+        <td><input class="cell-input" type="number" step="any" value="${s.mod1 ?? ''}" onchange="updateStudy(${i},'mod1',this.value)" aria-label="Covariate" placeholder="Covariate"></td>
+        <td><input class="cell-input" type="number" step="any" value="${s.mod2 ?? ''}" onchange="updateStudy(${i},'mod2',this.value)" aria-label="Covariate" placeholder="Covariate"></td>
         <td><input class="cell-input" type="number" value="${s.n_total || ''}" onchange="updateStudy(${i},'n_total',this.value)"></td>
         <td><input class="cell-input" type="number" value="${s.events_t ?? ''}" onchange="updateStudy(${i},'events_t',this.value)"></td>
         <td><input class="cell-input" type="number" value="${s.events_c ?? ''}" onchange="updateStudy(${i},'events_c',this.value)"></td>
@@ -1865,10 +1865,10 @@ function renderConfigForm() {
     document.getElementById('config-form').innerHTML = `
         <fieldset><legend>Effect Measure (§1.3)</legend>
             <div class="form-grid">
-                <div class="form-group"><label>Measure</label>
+                <div class="form-group"><label for="cfg-measure">Measure</label>
                     <select id="cfg-measure"><option value="logHR">log(HR)</option><option value="logRR">log(RR)</option><option value="logOR">log(OR)</option><option value="MD">MD</option><option value="SMD">SMD</option></select>
                 </div>
-                <div class="form-group"><label>Exponentiate Output</label>
+                <div class="form-group"><label for="cfg-exp">Exponentiate Output</label>
                     <select id="cfg-exp"><option value="true">Yes</option><option value="false">No</option></select>
                 </div>
             </div>

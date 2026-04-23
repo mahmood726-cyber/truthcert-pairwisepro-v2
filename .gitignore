@@ -30,3 +30,8 @@ DECISIONS.md
 # OS
 .DS_Store
 Thumbs.db
+
+# HTML backup snapshots (local workspace copies, regenerable from the
+# canonical TruthCert-PairwisePro-v1.0.html — don't commit)
+*.backup-*.html
+*.backup-pre-*.html

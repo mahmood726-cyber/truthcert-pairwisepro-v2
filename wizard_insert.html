@@ -23,7 +23,7 @@
 
                 <div class="form-grid" style="margin-top:20px;">
                     <div class="form-group">
-                        <label>Jurisdiction <span class="help-tooltip" title="Select the regulatory authority that will use this HTA">ℹ️</span></label>
+                        <label for="htaJurisdiction">Jurisdiction <span class="help-tooltip" title="Select the regulatory authority that will use this HTA">ℹ️</span></label>
                         <select id="htaJurisdiction" onchange="applyJurisdictionDefaults()">
                             <option value="">-- Select Jurisdiction --</option>
                             <option value="NICE">NICE (UK - National Institute for Health and Care Excellence)</option>
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Decision Type <span class="help-tooltip" title="Type of decision being made">ℹ️</span></label>
+                        <label for="htaDecisionType">Decision Type <span class="help-tooltip" title="Type of decision being made">ℹ️</span></label>
                         <select id="htaDecisionType">
                             <option value="reimbursement">Reimbursement Decision</option>
                             <option value="pricing">Pricing Decision</option>
@@ -55,7 +55,7 @@
 
                 <div class="form-grid" style="margin-top:20px;">
                     <div class="form-group">
-                        <label>Real-World Evidence Level <span class="help-tooltip" title="How much RWE is incorporated alongside RCT data">ℹ️</span></label>
+                        <label for="htaRweLevel">Real-World Evidence Level <span class="help-tooltip" title="How much RWE is incorporated alongside RCT data">ℹ️</span></label>
                         <select id="htaRweLevel">
                             <option value="rct_only">RCT-Only (No RWE)</option>
                             <option value="rwe_supplementary">RWE Supplementary</option>
@@ -64,12 +64,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Time Horizon (years) <span class="help-tooltip" title="Duration of the economic model">ℹ️</span></label>
+                        <label for="htaTimeHorizon">Time Horizon (years) <span class="help-tooltip" title="Duration of the economic model">ℹ️</span></label>
                         <input type="number" id="htaTimeHorizon" min="1" max="100" value="10" />
                     </div>
 
                     <div class="form-group">
-                        <label>Population Definition <span class="help-tooltip" title="Target population for the intervention">ℹ️</span></label>
+                        <label for="htaPopulation">Population Definition <span class="help-tooltip" title="Target population for the intervention">ℹ️</span></label>
                         <select id="htaPopulation">
                             <option value="full_indication">Full Licensed Indication</option>
                             <option value="restricted">Restricted Subgroup</option>
@@ -79,8 +79,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Eligible Cohort Size <span class="help-tooltip" title="Estimated number of eligible patients per year">ℹ️</span></label>
-                        <input type="number" id="htaCohortSize" min="1" placeholder="e.g., 10000" />
+                        <label for="htaCohortSize">Eligible Cohort Size <span class="help-tooltip" title="Estimated number of eligible patients per year">ℹ️</span></label>
+                        <input type="number" id="htaCohortSize" min="1" aria-label="e.g., 10000" placeholder="e.g., 10000" />
                     </div>
                 </div>
             </div>
@@ -92,12 +92,12 @@
 
                 <div class="form-grid" style="margin-top:20px;">
                     <div class="form-group">
-                        <label>Discount Rate (%) <span class="help-tooltip" title="Annual discount rate for costs and benefits">ℹ️</span></label>
+                        <label for="htaDiscountRate">Discount Rate (%) <span class="help-tooltip" title="Annual discount rate for costs and benefits">ℹ️</span></label>
                         <input type="number" id="htaDiscountRate" min="0" max="10" step="0.1" value="3.5" />
                     </div>
 
                     <div class="form-group">
-                        <label>Perspective <span class="help-tooltip" title="Economic perspective for cost analysis">ℹ️</span></label>
+                        <label for="htaPerspective">Perspective <span class="help-tooltip" title="Economic perspective for cost analysis">ℹ️</span></label>
                         <select id="htaPerspective">
                             <option value="payer">Payer/Healthcare System</option>
                             <option value="societal">Societal (includes indirect costs)</option>
@@ -106,12 +106,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Cost Year <span class="help-tooltip" title="Reference year for cost data">ℹ️</span></label>
+                        <label for="htaCostYear">Cost Year <span class="help-tooltip" title="Reference year for cost data">ℹ️</span></label>
                         <input type="number" id="htaCostYear" min="2000" max="2030" value="2024" />
                     </div>
 
                     <div class="form-group">
-                        <label>Currency <span class="help-tooltip" title="Local currency for reporting">ℹ️</span></label>
+                        <label for="htaCurrency">Currency <span class="help-tooltip" title="Local currency for reporting">ℹ️</span></label>
                         <select id="htaCurrency">
                             <option value="GBP">GBP (British Pound)</option>
                             <option value="EUR">EUR (Euro)</option>
@@ -124,12 +124,12 @@
 
                 <div class="form-grid" style="margin-top:16px;">
                     <div class="form-group">
-                        <label>Willingness-to-Pay Threshold <span class="help-tooltip" title="Cost-effectiveness threshold per QALY/DALY">ℹ️</span></label>
-                        <input type="number" id="htaWtpThreshold" min="0" step="1000" placeholder="e.g., 20000" />
+                        <label for="htaWtpThreshold">Willingness-to-Pay Threshold <span class="help-tooltip" title="Cost-effectiveness threshold per QALY/DALY">ℹ️</span></label>
+                        <input type="number" id="htaWtpThreshold" min="0" step="1000" aria-label="e.g., 20000" placeholder="e.g., 20000" />
                     </div>
 
                     <div class="form-group">
-                        <label>Health Outcome Metric <span class="help-tooltip" title="Primary health outcome measure">ℹ️</span></label>
+                        <label for="htaOutcomeMetric">Health Outcome Metric <span class="help-tooltip" title="Primary health outcome measure">ℹ️</span></label>
                         <select id="htaOutcomeMetric">
                             <option value="QALY">QALY (Quality-Adjusted Life Years)</option>
                             <option value="DALY">DALY (Disability-Adjusted Life Years)</option>

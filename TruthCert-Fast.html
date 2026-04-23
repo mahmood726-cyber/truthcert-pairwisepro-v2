@@ -191,8 +191,8 @@
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td><input type="text" value="Study ${idx}" style="width:100%"></td>
-        <td><input type="number" step="0.01" placeholder="0.00" style="width:100%"></td>
-        <td><input type="number" step="0.01" placeholder="0.10" style="width:100%"></td>
+        <td><input type="number" step="0.01" aria-label="0.00" placeholder="0.00" style="width:100%"></td>
+        <td><input type="number" step="0.01" aria-label="0.10" placeholder="0.10" style="width:100%"></td>
         <td><button class="btn" onclick="this.closest('tr').remove()">Remove</button></td>
       `;
       tbody.appendChild(tr);
